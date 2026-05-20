@@ -157,7 +157,7 @@ const ContentCreationSection = () => {
                 transform: i % 2 === 0 ? "translateY(0)" : "translateY(28px)",
               }}
             >
-              <PhoneReelComponent {...reel} />
+              <PhoneReelComponent {...reel} id={i} />
             </motion.div>
           ))}
         </div>
