@@ -4,6 +4,7 @@ import portfolioBlossoms from "@/assets/portfolio-blossoms.jpg";
 import portfolioJewellery from "@/assets/portfolio-bsp-jewellery.jpg";
 import vijayaMockup from "@/assets/vijaya-mockup.png";
 import sanghviMockup from "@/assets/sanghvi-mockup.png";
+import metroCarsMockup from "@/assets/metro-cars-mockup.png";
 
 type Client = {
   name: string;
@@ -161,6 +162,7 @@ const clients: Client[] = [
       { value: "4.1×", label: "Test Drives" },
       { value: "76K", label: "Followers" },
     ],
+    mockupImage: metroCarsMockup,
   },
   {
     name: "Vijaya Super Specialty Hospital",
