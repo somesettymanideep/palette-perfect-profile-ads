@@ -104,7 +104,7 @@ const SeoSection = () => {
             <img
               src={seoLaptop}
               alt="SEO analytics on laptop"
-              className="w-72 md:w-96 h-auto drop-shadow-2xl"
+              className="w-72 md:w-96 h-auto drop-shadow-2xl scale-x-[-1]"
             />
           </motion.div>
         </div>
