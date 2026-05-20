@@ -5,6 +5,7 @@ import portfolioJewellery from "@/assets/portfolio-bsp-jewellery.jpg";
 import vijayaMockup from "@/assets/vijaya-mockup.png";
 import sanghviMockup from "@/assets/sanghvi-mockup.png";
 import metroCarsMockup from "@/assets/metro-cars-mockup.png";
+import bombayJewellersMockup from "@/assets/bombay-jewellers-mockup.png";
 
 type Client = {
   name: string;
@@ -29,49 +30,25 @@ const metroCover =
 
 const clients: Client[] = [
   {
-    name: "Blossoms Hospital",
-    industry: "Healthcare",
-    handle: "blossomshospital",
-    fbName: "Blossoms Hospital",
-    cover: portfolioBlossoms,
-    accent: "from-rose-400 to-pink-500",
-    bio: "Multi-Speciality Hospital · Compassionate Care\nNH-44, Hyderabad · 24/7 Emergency",
-    posts: 248,
-    followers: "42.6K",
-    following: 184,
-    likes: "38K",
-    grid: [
-      "https://images.unsplash.com/photo-1631815588090-d4bfec5b1ccb?w=400&q=70",
-      "https://images.unsplash.com/photo-1551601651-2a8555f1a136?w=400&q=70",
-      "https://images.unsplash.com/photo-1666214280391-8ff5bd3c0bf0?w=400&q=70",
-      "https://images.unsplash.com/photo-1576091160550-2173dba999ef?w=400&q=70",
-      "https://images.unsplash.com/photo-1579684385127-1ef15d508118?w=400&q=70",
-      "https://images.unsplash.com/photo-1559757175-5700dde675bc?w=400&q=70",
-      "https://images.unsplash.com/photo-1612349317150-e413f6a5b16d?w=400&q=70",
-      "https://images.unsplash.com/photo-1583912267550-d6c2ac3196c0?w=400&q=70",
-      "https://images.unsplash.com/photo-1505751172876-fa1923c5c528?w=400&q=70",
-    ],
-    fbPosts: [
-      {
-        caption:
-          "World Heart Day Camp · Free ECG & BP screening this Saturday. Walk in between 9 AM – 1 PM.",
-        likes: "2.1K",
-        comments: "184",
-        shares: "312",
-      },
-      {
-        caption:
-          "Meet Dr. Anita Reddy, our Sr. Cardiologist — 18+ years of experience in interventional cardiology.",
-        likes: "1.4K",
-        comments: "96",
-        shares: "128",
-      },
-    ],
+    name: "Bombay Jewellers",
+    industry: "Jewellery",
+    handle: "bombayjewellersvja",
+    fbName: "Bombay Jewellers",
+    cover: portfolioJewellery,
+    accent: "from-amber-400 to-yellow-600",
+    bio: "Bombay Jewellers · Since 1935\nSymbol of Trust · Crafters of Superior Designs\nSpecialised in Gold, Diamond & Platinum",
+    posts: 522,
+    followers: "4,232",
+    following: 161,
+    likes: "0",
+    grid: [],
+    fbPosts: [],
     results: [
-      { value: "+312%", label: "Page Reach" },
-      { value: "3.2×", label: "Inquiries" },
-      { value: "42K", label: "Followers" },
+      { value: "+286%", label: "Page Reach" },
+      { value: "3.4×", label: "Inquiries" },
+      { value: "4.2K", label: "Followers" },
     ],
+    mockupImage: bombayJewellersMockup,
   },
   {
     name: "BSP Golds & Diamonds",
