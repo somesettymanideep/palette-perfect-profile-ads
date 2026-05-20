@@ -111,17 +111,11 @@ const ServicesSection = () => {
 
               <div className="relative z-10">
                 <div className="w-20 h-20 rounded-lg flex items-center justify-center mb-6 transition-all duration-500">
-                  {service.image ? (
-                    <img
-                      src={service.image}
-                      alt={service.title}
-                      className="w-14 h-14 object-contain transition-transform duration-500 group-hover:scale-110"
-                    />
-                  ) : (
-                    <span className="text-4xl transition-transform duration-500">
-                      {service.icon}
-                    </span>
-                  )}
+                  <img
+                    src={service.image}
+                    alt={service.title}
+                    className="w-14 h-14 object-contain transition-transform duration-500 group-hover:scale-110"
+                  />
                 </div>
                 <span className="absolute top-6 right-6 font-body text-xs text-muted-foreground/40 group-hover:text-primary-foreground/60 font-500 transition-colors duration-500">
                   {String(i + 1).padStart(2, "0")}
