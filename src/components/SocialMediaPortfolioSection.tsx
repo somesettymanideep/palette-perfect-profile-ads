@@ -73,6 +73,7 @@ const clients: Client[] = [
       { value: "5.2K", label: "Followers" },
     ],
     mockupImage: sairajendraMockup,
+    flipMockup: true,
   },
   {
     name: "Metro Cars",
