@@ -295,7 +295,6 @@ const InstagramMockup = ({ client }: { client: Client }) => {
       </div>
     </div>
   </div>
-  </div>
   );
 };
 
