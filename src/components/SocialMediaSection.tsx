@@ -49,27 +49,6 @@ const services = [
     ],
   },
   {
-    icon: PenTool,
-    title: "Content Creation",
-    image: socialContent,
-    description:
-      "Thumb-stopping visuals, sharp copy and brand storytelling that resonates everywhere.",
-    features: [
-      "Graphic Design",
-      "Video Production",
-      "Copywriting",
-      "Brand Storytelling",
-      "Content Calendar",
-    ],
-    stat: "500+",
-    statLabel: "Posts Per Month",
-    extraStats: [
-      { value: "120+", label: "Reels / Videos" },
-      { value: "98%", label: "On-time Delivery" },
-      { value: "4.9★", label: "Client Rating" },
-    ],
-  },
-  {
     icon: Megaphone,
     title: "Social Media Advertising",
     image: socialAdvertising,
