@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 import { Volume2, VolumeX } from "lucide-react";
-import { useRef, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import reel1 from "@/assets/content-reel-1.mp4";
 import reel2 from "@/assets/content-reel-2.mp4";
 import reel3 from "@/assets/content-reel-3.mp4";
@@ -18,9 +18,27 @@ const reels = [
   { src: reel4, label: "Campaign Edit", category: "Short" },
 ];
 
-const PhoneReelComponent = ({ src, label, category }: { src: string; label: string; category: string }) => {
+// Global coordinator: ensure only one reel plays sound at a time
+const REEL_UNMUTE_EVENT = "ads-reel-unmute";
+
+const PhoneReelComponent = ({ src, label, category, id }: { src: string; label: string; category: string; id: number }) => {
   const videoRef = useRef<HTMLVideoElement>(null);
   const [muted, setMuted] = useState(true);
+
+  useEffect(() => {
+    const handler = (e: Event) => {
+      const detail = (e as CustomEvent<number>).detail;
+      if (detail !== id) {
+        const v = videoRef.current;
+        if (v && !v.muted) {
+          v.muted = true;
+          setMuted(true);
+        }
+      }
+    };
+    window.addEventListener(REEL_UNMUTE_EVENT, handler);
+    return () => window.removeEventListener(REEL_UNMUTE_EVENT, handler);
+  }, [id]);
 
   const toggleMute = () => {
     const v = videoRef.current;
@@ -28,6 +46,7 @@ const PhoneReelComponent = ({ src, label, category }: { src: string; label: stri
     const next = !muted;
     v.muted = next;
     if (!next) {
+      window.dispatchEvent(new CustomEvent<number>(REEL_UNMUTE_EVENT, { detail: id }));
       v.play().catch(() => {});
     }
     setMuted(next);
