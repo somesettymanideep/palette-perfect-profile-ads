@@ -162,86 +162,101 @@ const clients: Client[] = [
 ];
 
 const InstagramMockup = ({ client }: { client: Client }) => (
-  <div className="relative mx-auto w-full max-w-[320px]">
-    <div className="bg-[#0d0d0d] rounded-[2.5rem] p-2 shadow-[0_30px_60px_-15px_rgba(0,0,0,0.6)] ring-1 ring-off-white/10">
-      <div className="absolute top-2 left-1/2 -translate-x-1/2 w-28 h-6 bg-[#0d0d0d] rounded-b-2xl z-20" />
-      <div className="relative rounded-[2rem] overflow-hidden bg-white aspect-[9/19]">
-        {/* Status bar */}
-        <div className="flex items-center justify-between px-6 pt-3 pb-1 text-[10px] font-600 text-black">
-          <span>9:41</span>
-          <span className="flex gap-1 items-center">
-            <span className="w-3 h-2 bg-black rounded-sm" />
-            <span className="w-3 h-2 border border-black rounded-sm" />
-          </span>
-        </div>
-        {/* IG header */}
-        <div className="flex items-center justify-between px-4 py-2 border-b border-gray-200">
-          <span className="font-700 text-sm text-black">{client.handle}</span>
-          <MoreHorizontal className="w-4 h-4 text-black" />
-        </div>
-        {/* Profile row */}
-        <div className="px-4 pt-4">
-          <div className="flex items-center gap-5">
-            <div className={`w-16 h-16 rounded-full p-[2px] bg-gradient-to-tr ${client.accent}`}>
-              <div className="w-full h-full rounded-full p-[2px] bg-white">
-                <img src={client.cover} alt={client.name} className="w-full h-full rounded-full object-cover" />
-              </div>
-            </div>
-            <div className="flex-1 grid grid-cols-3 text-center">
-              <div>
-                <div className="text-[13px] font-700 text-black">{client.posts}</div>
-                <div className="text-[10px] text-gray-500">posts</div>
-              </div>
-              <div>
-                <div className="text-[13px] font-700 text-black">{client.followers}</div>
-                <div className="text-[10px] text-gray-500">followers</div>
-              </div>
-              <div>
-                <div className="text-[13px] font-700 text-black">{client.following}</div>
-                <div className="text-[10px] text-gray-500">following</div>
-              </div>
-            </div>
+  <div className="relative mx-auto w-full max-w-[420px] pb-24">
+    {/* Podium (two stacked discs: orange middle, off-white base) */}
+    <div className="absolute left-1/2 -translate-x-1/2 bottom-0 w-[110%] pointer-events-none">
+      {/* Outer base disc */}
+      <div className="relative mx-auto w-[100%] aspect-[5/1]">
+        <div className="absolute inset-0 rounded-[50%] bg-gradient-to-b from-off-white to-[#e8e2d6] shadow-[0_30px_50px_-20px_rgba(0,0,0,0.25)]" />
+        {/* Orange disc on top */}
+        <div className="absolute left-1/2 -translate-x-1/2 bottom-[35%] w-[78%] aspect-[5/1.1]">
+          <div className="absolute inset-0 rounded-[50%] bg-gradient-to-b from-primary to-[hsl(var(--primary)/0.85)] shadow-[0_18px_30px_-10px_rgba(0,0,0,0.35)]" />
+          {/* Top off-white disc (where phone stands) */}
+          <div className="absolute left-1/2 -translate-x-1/2 bottom-[55%] w-[90%] aspect-[6/1]">
+            <div className="absolute inset-0 rounded-[50%] bg-gradient-to-b from-white to-off-white shadow-[inset_0_2px_6px_rgba(0,0,0,0.08)]" />
           </div>
-          <div className="mt-3">
-            <div className="text-[12px] font-700 text-black">{client.name}</div>
-            <div className="text-[10px] text-gray-700 whitespace-pre-line leading-snug mt-0.5">
-              {client.bio}
-            </div>
-          </div>
-          <div className="flex gap-1.5 mt-3">
-            <button className="flex-1 bg-[#0095f6] text-white text-[11px] font-600 py-1 rounded">
-              Follow
-            </button>
-            <button className="flex-1 bg-gray-100 text-black text-[11px] font-600 py-1 rounded">
-              Message
-            </button>
-            <button className="bg-gray-100 text-black text-[11px] font-600 py-1 px-2 rounded">
-              ▼
-            </button>
-          </div>
-        </div>
-        {/* Grid */}
-        <div className="mt-4 grid grid-cols-3 gap-[2px]">
-          {client.grid.map((src, i) => (
-            <div key={i} className="aspect-square bg-gray-100 overflow-hidden">
-              <img src={src} alt="" className="w-full h-full object-cover" loading="lazy" />
-            </div>
-          ))}
-        </div>
-        {/* Bottom nav */}
-        <div className="absolute bottom-0 left-0 right-0 bg-white border-t border-gray-200 flex justify-around py-2">
-          <Home className="w-4 h-4 text-black" />
-          <Search className="w-4 h-4 text-black" />
-          <PlusSquare className="w-4 h-4 text-black" />
-          <Film className="w-4 h-4 text-black" />
-          <User className="w-4 h-4 text-black" />
         </div>
       </div>
     </div>
-    <div className="mt-4 text-center">
-      <span className="font-body text-[10px] uppercase tracking-[0.25em] text-primary font-700">
-        Instagram
-      </span>
+
+    {/* Phone (tilted) */}
+    <div
+      className="relative mx-auto w-full max-w-[300px] z-10"
+      style={{ transform: "perspective(1400px) rotateY(-14deg) rotateX(4deg) rotateZ(-3deg)", transformStyle: "preserve-3d" }}
+    >
+      <div className="bg-[#0d0d0d] rounded-[2.5rem] p-2 shadow-[40px_50px_80px_-20px_rgba(0,0,0,0.55)] ring-1 ring-off-white/10">
+        <div className="absolute top-2 left-1/2 -translate-x-1/2 w-28 h-6 bg-[#0d0d0d] rounded-b-2xl z-20" />
+        <div className="relative rounded-[2rem] overflow-hidden bg-white aspect-[9/19]">
+          {/* Status bar */}
+          <div className="flex items-center justify-between px-6 pt-3 pb-1 text-[10px] font-600 text-black">
+            <span>9:41</span>
+            <span className="flex gap-1 items-center">
+              <span className="w-3 h-2 bg-black rounded-sm" />
+              <span className="w-3 h-2 border border-black rounded-sm" />
+            </span>
+          </div>
+          {/* IG header */}
+          <div className="flex items-center justify-between px-4 py-2 border-b border-gray-200">
+            <span className="font-700 text-sm text-black">{client.handle}</span>
+            <MoreHorizontal className="w-4 h-4 text-black" />
+          </div>
+          {/* Profile row */}
+          <div className="px-4 pt-4">
+            <div className="flex items-center gap-5">
+              <div className={`w-16 h-16 rounded-full p-[2px] bg-gradient-to-tr ${client.accent}`}>
+                <div className="w-full h-full rounded-full p-[2px] bg-white">
+                  <img src={client.cover} alt={client.name} className="w-full h-full rounded-full object-cover" />
+                </div>
+              </div>
+              <div className="flex-1 grid grid-cols-3 text-center">
+                <div>
+                  <div className="text-[13px] font-700 text-black">{client.posts}</div>
+                  <div className="text-[10px] text-gray-500">posts</div>
+                </div>
+                <div>
+                  <div className="text-[13px] font-700 text-black">{client.followers}</div>
+                  <div className="text-[10px] text-gray-500">followers</div>
+                </div>
+                <div>
+                  <div className="text-[13px] font-700 text-black">{client.following}</div>
+                  <div className="text-[10px] text-gray-500">following</div>
+                </div>
+              </div>
+            </div>
+            <div className="mt-3">
+              <div className="text-[12px] font-700 text-black">{client.name}</div>
+              <div className="text-[10px] text-gray-700 whitespace-pre-line leading-snug mt-0.5">
+                {client.bio}
+              </div>
+            </div>
+            <div className="flex gap-1.5 mt-3">
+              <button className="flex-1 bg-[#0095f6] text-white text-[11px] font-600 py-1 rounded">
+                Follow
+              </button>
+              <button className="flex-1 bg-gray-100 text-black text-[11px] font-600 py-1 rounded">
+                Message
+              </button>
+              <button className="bg-gray-100 text-black text-[11px] font-600 py-1 px-2 rounded">
+                ▼
+              </button>
+            </div>
+          </div>
+          {/* Featured creative (large) */}
+          <div className="mt-4 mx-0">
+            <div className="relative aspect-square overflow-hidden">
+              <img src={client.grid[0]} alt="" className="w-full h-full object-cover" loading="lazy" />
+            </div>
+          </div>
+          {/* Bottom nav */}
+          <div className="absolute bottom-0 left-0 right-0 bg-white border-t border-gray-200 flex justify-around py-2">
+            <Home className="w-4 h-4 text-black" />
+            <Search className="w-4 h-4 text-black" />
+            <PlusSquare className="w-4 h-4 text-black" />
+            <Film className="w-4 h-4 text-black" />
+            <User className="w-4 h-4 text-black" />
+          </div>
+        </div>
+      </div>
     </div>
   </div>
 );
