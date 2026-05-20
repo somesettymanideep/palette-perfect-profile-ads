@@ -163,6 +163,7 @@ const clients: Client[] = [
       { value: "14.4K", label: "Followers" },
     ],
     mockupImage: sanghviMockup,
+    flipMockup: true,
   },
 ];
 
