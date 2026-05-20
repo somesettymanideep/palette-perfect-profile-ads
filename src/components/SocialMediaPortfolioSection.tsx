@@ -6,6 +6,7 @@ import vijayaMockup from "@/assets/vijaya-mockup.png";
 import sanghviMockup from "@/assets/sanghvi-mockup.png";
 import metroCarsMockup from "@/assets/metro-cars-mockup.png";
 import bombayJewellersMockup from "@/assets/bombay-jewellers-mockup.png";
+import sairajendraMockup from "@/assets/sairajendra-mockup.png";
 
 type Client = {
   name: string;
@@ -51,49 +52,25 @@ const clients: Client[] = [
     mockupImage: bombayJewellersMockup,
   },
   {
-    name: "BSP Golds & Diamonds",
+    name: "Sai Rajendra Gold Palace",
     industry: "Jewellery",
-    handle: "bsp_goldsdiamonds",
-    fbName: "BSP Golds & Diamonds",
+    handle: "sairajendragoldpalace",
+    fbName: "Sai Rajendra Gold Palace",
     cover: portfolioJewellery,
     accent: "from-amber-400 to-yellow-600",
-    bio: "Heritage Jewellery House · Est. 1992\nBridal · Diamond · 22K Gold · Hyderabad",
-    posts: 612,
-    followers: "128K",
-    following: 92,
-    likes: "94K",
-    grid: [
-      "https://images.unsplash.com/photo-1611652022419-a9419f74343d?w=400&q=70",
-      "https://images.unsplash.com/photo-1599643478518-a784e5dc4c8f?w=400&q=70",
-      "https://images.unsplash.com/photo-1605100804763-247f67b3557e?w=400&q=70",
-      "https://images.unsplash.com/photo-1515562141207-7a88fb7ce338?w=400&q=70",
-      "https://images.unsplash.com/photo-1535632787350-4e68ef0ac584?w=400&q=70",
-      "https://images.unsplash.com/photo-1602173574767-37ac01994b2a?w=400&q=70",
-      "https://images.unsplash.com/photo-1573408301185-9146fe634ad0?w=400&q=70",
-      "https://images.unsplash.com/photo-1617038220319-276d3cfab638?w=400&q=70",
-      "https://images.unsplash.com/photo-1602751584552-8ba73aad10e1?w=400&q=70",
-    ],
-    fbPosts: [
-      {
-        caption:
-          "Festive Collection 2026 is here — Polki, Kundan & Uncut Diamonds. Visit our showroom for an exclusive preview.",
-        likes: "5.6K",
-        comments: "412",
-        shares: "984",
-      },
-      {
-        caption:
-          "Bridal Edit · Heirloom-worthy sets crafted by master artisans. Book a private consultation today.",
-        likes: "3.9K",
-        comments: "256",
-        shares: "612",
-      },
-    ],
+    bio: "Shopping & retail · Est. 1905\nA legacy built on your trust in our artistry of Gold and Diamond Jewellery.\nMG Road, nr. Taj Vivanta",
+    posts: 1687,
+    followers: "5,256",
+    following: 6,
+    likes: "0",
+    grid: [],
+    fbPosts: [],
     results: [
-      { value: "+480%", label: "Engagement" },
-      { value: "2.0×", label: "Walk-ins" },
-      { value: "128K", label: "Followers" },
+      { value: "+264%", label: "Page Reach" },
+      { value: "3.1×", label: "Inquiries" },
+      { value: "5.2K", label: "Followers" },
     ],
+    mockupImage: sairajendraMockup,
   },
   {
     name: "Metro Cars",
