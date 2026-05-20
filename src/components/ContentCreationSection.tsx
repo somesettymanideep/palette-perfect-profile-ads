@@ -5,11 +5,14 @@ import reel1 from "@/assets/content-reel-1.mp4";
 import reel2 from "@/assets/content-reel-2.mp4";
 import reel3 from "@/assets/content-reel-3.mp4";
 import reel4 from "@/assets/content-reel-4.mp4";
+import reelJewellery from "@/assets/reel-jewellery.mp4";
+import reelMetroCars from "@/assets/reel-metro-cars.mp4";
+import reelJewellery2 from "@/assets/reel-jewellery-2.mp4";
 
 const reels = [
-  { src: reel1, label: "Brand Story", category: "Reel" },
-  { src: reel3, label: "Behind The Scenes", category: "Reel" },
-  { src: reel4, label: "Campaign Edit", category: "Short" },
+  { src: reelJewellery, label: "Jewellery Brand", category: "Reel" },
+  { src: reelMetroCars, label: "Metro Cars", category: "Reel" },
+  { src: reelJewellery2, label: "Jewellery Edit", category: "Short" },
 ];
 
 const PhoneReelComponent = ({ src, label, category }: { src: string; label: string; category: string }) => {
