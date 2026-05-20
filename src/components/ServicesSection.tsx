@@ -5,43 +5,49 @@ import googleAdsIcon from "@/assets/service-google-ads.png";
 import socialHandlingIcon from "@/assets/service-social-handling.png";
 import socialAdvertisingIcon from "@/assets/service-social-advertising.png";
 import contentCreationIcon from "@/assets/service-content-creation.png";
+import bgWebDesign from "@/assets/bg-web-design.jpg";
+import bgSocialHandling from "@/assets/bg-social-handling.jpg";
+import bgSocialAds from "@/assets/bg-social-ads.jpg";
+import bgGoogleAds from "@/assets/bg-google-ads.jpg";
+import bgSeo from "@/assets/bg-seo.jpg";
+import bgContentCreation from "@/assets/bg-content-creation.jpg";
 
 const services = [
   {
     title: "Web Designing & Developing",
     description: "Creative designing, high quality building, mobile-friendly, SEO-friendly with supportive maintenance.",
-    icon: "image",
     image: webDesignIcon,
+    bg: bgWebDesign,
   },
   {
     title: "Social Media Handling",
     description: "From account creation to reputation management. Regular analytics, pages optimization and hashtag research.",
-    icon: "image",
     image: socialHandlingIcon,
+    bg: bgSocialHandling,
   },
   {
     title: "Social Media Advertising",
     description: "Customized audience targeting for more brand value and reach. Behavioral, psychographic, and geo targeting.",
-    icon: "image",
     image: socialAdvertisingIcon,
+    bg: bgSocialAds,
   },
   {
     title: "Google Ads",
     description: "Search, Display, Shopping, Video, App Promotion & Discover Ads — with customized audience options.",
-    icon: "image",
     image: googleAdsIcon,
+    bg: bgGoogleAds,
   },
   {
     title: "Search Engine Optimization",
     description: "Organic and white hat SEO techniques. Increase traffic, grow conversions, improve ranking and generate leads.",
-    icon: "image",
     image: seoIcon,
+    bg: bgSeo,
   },
   {
     title: "Content Creation",
     description: "Our writers always deliver amazing creative and apt content. From social media posts to brand storytelling.",
-    icon: "image",
     image: contentCreationIcon,
+    bg: bgContentCreation,
   },
 ];
 
@@ -97,11 +103,11 @@ const ServicesSection = () => {
             >
               {/* Hover background image */}
               <div
-                className="absolute inset-0 bg-cover bg-center opacity-0 group-hover:opacity-100 transition-opacity duration-500"
-                style={{ backgroundImage: `url(${service.image})` }}
+                className="absolute inset-0 bg-cover bg-center opacity-0 group-hover:opacity-100 transition-opacity duration-500 scale-110 group-hover:scale-100"
+                style={{ backgroundImage: `url(${service.bg})` }}
               />
               {/* Overlay */}
-              <div className="absolute inset-0 bg-primary/90 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+              <div className="absolute inset-0 bg-primary/85 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
 
               <div className="relative z-10">
                 <div className="w-20 h-20 rounded-lg flex items-center justify-center mb-6 transition-all duration-500">
