@@ -10,9 +10,12 @@ import reelMetroCars from "@/assets/reel-metro-cars.mp4";
 import reelJewellery2 from "@/assets/reel-jewellery-2.mp4";
 
 const reels = [
+  { src: reel1, label: "Brand Story", category: "Reel" },
   { src: reelJewellery, label: "Jewellery Brand", category: "Reel" },
   { src: reelMetroCars, label: "Metro Cars", category: "Reel" },
+  { src: reel3, label: "Behind The Scenes", category: "Reel" },
   { src: reelJewellery2, label: "Jewellery Edit", category: "Short" },
+  { src: reel4, label: "Campaign Edit", category: "Short" },
 ];
 
 const PhoneReelComponent = ({ src, label, category }: { src: string; label: string; category: string }) => {
