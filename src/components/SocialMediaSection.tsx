@@ -113,18 +113,19 @@ const PhoneMockup = ({ image, name }: { image: string; name: string }) => (
 
 const SocialMediaSection = () => {
   return (
-    <section className="py-32 relative overflow-hidden bg-gradient-to-br from-[hsl(20,14%,12%)] via-[hsl(18,40%,16%)] to-[hsl(22,70%,22%)]">
-      {/* Decorative gradient orbs */}
-      <div className="absolute -top-32 -left-32 w-[500px] h-[500px] rounded-full bg-primary/20 blur-3xl pointer-events-none" />
-      <div className="absolute -bottom-32 -right-32 w-[500px] h-[500px] rounded-full bg-primary/15 blur-3xl pointer-events-none" />
+    <section className="py-32 relative overflow-hidden bg-primary">
+      {/* Decorative orbs in brand tones */}
+      <div className="absolute -top-32 -left-32 w-[500px] h-[500px] rounded-full bg-off-white/10 blur-3xl pointer-events-none" />
+      <div className="absolute -bottom-32 -right-32 w-[500px] h-[500px] rounded-full bg-charcoal/30 blur-3xl pointer-events-none" />
       {/* Subtle diagonal lines pattern */}
       <div
-        className="absolute inset-0 opacity-[0.06] pointer-events-none"
+        className="absolute inset-0 opacity-[0.12] pointer-events-none"
         style={{
           backgroundImage:
-            "repeating-linear-gradient(45deg, hsl(var(--primary)) 0 1px, transparent 1px 24px)",
+            "repeating-linear-gradient(45deg, hsl(var(--charcoal)) 0 1px, transparent 1px 24px)",
         }}
       />
+
 
 
       <div className="container-wide relative z-10">
