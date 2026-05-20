@@ -19,6 +19,7 @@ type Client = {
   grid: string[];
   fbPosts: { caption: string; likes: string; comments: string; shares: string }[];
   results: { value: string; label: string }[];
+  mockupImage?: string;
 };
 
 const metroCover =
@@ -160,9 +161,43 @@ const clients: Client[] = [
       { value: "76K", label: "Followers" },
     ],
   },
+  {
+    name: "Vijaya Super Specialty Hospital",
+    industry: "Healthcare",
+    handle: "vijayasuperspecialtyhospital",
+    fbName: "Vijaya Super Specialty Hospital",
+    cover: portfolioBlossoms,
+    accent: "from-primary to-[hsl(var(--primary)/0.7)]",
+    bio: "Excellence in Healthcare for Everyone\nExpert Doctors · Advanced Treatments · Specializing in Multi-Speciality Care",
+    posts: 211,
+    followers: "492",
+    following: 0,
+    likes: "0",
+    grid: [],
+    fbPosts: [],
+    results: [
+      { value: "+248%", label: "Page Reach" },
+      { value: "2.8×", label: "Inquiries" },
+      { value: "492", label: "Followers" },
+    ],
+    mockupImage: vijayaMockup,
+  },
 ];
 
-const InstagramMockup = ({ client }: { client: Client }) => (
+const InstagramMockup = ({ client }: { client: Client }) => {
+  if (client.mockupImage) {
+    return (
+      <div className="relative mx-auto w-full max-w-[420px]">
+        <img
+          src={client.mockupImage}
+          alt={`${client.name} Instagram mockup`}
+          className="w-full h-auto object-contain"
+          loading="lazy"
+        />
+      </div>
+    );
+  }
+  return (
   <div className="relative mx-auto w-full max-w-[420px] pb-24">
     {/* Podium (two stacked discs: orange middle, off-white base) */}
     <div className="absolute left-1/2 -translate-x-1/2 bottom-0 w-[110%] pointer-events-none">
