@@ -2,9 +2,9 @@ import { motion } from "framer-motion";
 import { MapPin, Star, Search, TrendingUp, CheckCircle2, Globe, ArrowUpRight, Phone, Navigation as NavIcon, Mic, Lock, BarChart3 } from "lucide-react";
 
 const gmbResults = [
-  { name: "Blossoms Hospital", category: "Multispeciality Hospital", rating: "4.9", reviews: "320", years: "15+ years in business", status: "Open 24 hours" },
-  { name: "BSP Golds & Diamonds", category: "Jewellery Store", rating: "4.8", reviews: "210", years: "12+ years in business", status: "Open · Closes 9 pm" },
-  { name: "NutriomFit Wellness", category: "Yoga Studio", rating: "5.0", reviews: "180", years: "6+ years in business", status: "Open · Closes 8 pm" },
+  { name: "Anjana Hospital", category: "Multispeciality Hospital · Nandigama", rating: "4.9", reviews: "412", years: "18+ years in business", status: "Open 24 hours" },
+  { name: "Nandigama Care Hospital", category: "General Hospital", rating: "4.6", reviews: "186", years: "10+ years in business", status: "Open · Closes 10 pm" },
+  { name: "Sri Sai Multispeciality", category: "Multispeciality Hospital", rating: "4.5", reviews: "142", years: "8+ years in business", status: "Open · Closes 9 pm" },
 ];
 
 const serpResults = [
@@ -123,7 +123,7 @@ const SeoPortfolioSection = () => {
                       </span>
                     </div>
                     <div className="flex items-center gap-2 px-4 py-2 rounded-full border border-gray-200 shadow-sm">
-                      <span className="text-[11px] text-gray-600 flex-1 truncate">hospitals near me</span>
+                      <span className="text-[11px] text-gray-600 flex-1 truncate">best hospital in nandigama</span>
                       <Search className="w-3.5 h-3.5 text-gray-400" />
                       <Mic className="w-3.5 h-3.5" style={{ color: "#4285F4" }} />
                     </div>
