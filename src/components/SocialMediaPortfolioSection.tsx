@@ -516,18 +516,31 @@ const SocialMediaPortfolioSection = () => {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, amount: 0.15 }}
               transition={{ duration: 0.9, ease: [0.22, 1, 0.36, 1] }}
+              className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center"
             >
-              {/* Client label */}
-              <div className="mb-10 flex flex-col md:flex-row md:items-end md:justify-between gap-4">
-                <div>
-                  <span className="inline-flex items-center font-body text-[11px] font-700 uppercase tracking-[0.2em] text-charcoal bg-primary px-4 py-1.5 rounded-full mb-3">
-                    {client.industry}
-                  </span>
-                  <h3 className="font-heading text-3xl md:text-5xl font-600 text-charcoal leading-tight">
-                    {client.name}
-                  </h3>
-                </div>
-                <div className="flex gap-8">
+              {/* Phone mockup (left on desktop, alternates) */}
+              <motion.div
+                className={`flex justify-center ${i % 2 === 1 ? "lg:order-2" : ""}`}
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true, amount: 0.2 }}
+                transition={{ duration: 0.8, delay: 0.15 }}
+              >
+                <InstagramMockup client={client} />
+              </motion.div>
+
+              {/* Right: brand name + industry badge + stats */}
+              <div className={`${i % 2 === 1 ? "lg:order-1 lg:pr-8" : "lg:pl-8"}`}>
+                <span className="inline-flex items-center font-body text-[11px] font-700 uppercase tracking-[0.2em] text-charcoal bg-primary px-4 py-1.5 rounded-full mb-5">
+                  {client.industry}
+                </span>
+                <h3 className="font-heading text-4xl md:text-5xl lg:text-6xl font-600 text-charcoal leading-[1.05] mb-4">
+                  {client.name}
+                </h3>
+                <p className="font-body text-base text-charcoal/70 leading-relaxed whitespace-pre-line mb-8 max-w-md">
+                  {client.bio}
+                </p>
+                <div className="grid grid-cols-3 gap-6 pt-6 border-t border-charcoal/15 max-w-md">
                   {client.results.map((r) => (
                     <div key={r.label}>
                       <div className="font-heading text-2xl md:text-3xl font-600 text-primary leading-none">
@@ -539,17 +552,6 @@ const SocialMediaPortfolioSection = () => {
                     </div>
                   ))}
                 </div>
-              </div>
-
-              <div className="flex justify-center">
-                <motion.div
-                  initial={{ opacity: 0, y: 30 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true, amount: 0.2 }}
-                  transition={{ duration: 0.8, delay: 0.15 }}
-                >
-                  <InstagramMockup client={client} />
-                </motion.div>
               </div>
             </motion.div>
           ))}
