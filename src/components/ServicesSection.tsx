@@ -85,7 +85,7 @@ const ServicesSection = () => {
           {services.map((service, i) => (
             <motion.div
               key={service.title}
-              className="group relative bg-card border border-border rounded-xl p-8 hover:bg-primary hover:border-primary hover:shadow-2xl hover:-translate-y-2 transition-all duration-500 cursor-pointer"
+              className="group relative bg-card border border-border rounded-xl p-8 hover:border-primary hover:shadow-2xl hover:-translate-y-2 transition-all duration-500 cursor-pointer overflow-hidden"
               initial={{ opacity: 0, y: 40 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, amount: 0.2 }}
@@ -95,28 +95,38 @@ const ServicesSection = () => {
                 ease: [0.22, 1, 0.36, 1],
               }}
             >
-              <div className="w-20 h-20 rounded-lg flex items-center justify-center mb-6 transition-all duration-500">
-                {service.image ? (
-                  <img
-                    src={service.image}
-                    alt={service.title}
-                    className="w-14 h-14 object-contain transition-transform duration-500"
-                  />
-                ) : (
-                  <span className="text-4xl transition-transform duration-500">
-                    {service.icon}
-                  </span>
-                )}
+              {/* Hover background image */}
+              <div
+                className="absolute inset-0 bg-cover bg-center opacity-0 group-hover:opacity-100 transition-opacity duration-500"
+                style={{ backgroundImage: `url(${service.image})` }}
+              />
+              {/* Overlay */}
+              <div className="absolute inset-0 bg-primary/90 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+
+              <div className="relative z-10">
+                <div className="w-20 h-20 rounded-lg flex items-center justify-center mb-6 transition-all duration-500">
+                  {service.image ? (
+                    <img
+                      src={service.image}
+                      alt={service.title}
+                      className="w-14 h-14 object-contain transition-transform duration-500 group-hover:scale-110"
+                    />
+                  ) : (
+                    <span className="text-4xl transition-transform duration-500">
+                      {service.icon}
+                    </span>
+                  )}
+                </div>
+                <span className="absolute top-6 right-6 font-body text-xs text-muted-foreground/40 group-hover:text-primary-foreground/60 font-500 transition-colors duration-500">
+                  {String(i + 1).padStart(2, "0")}
+                </span>
+                <h3 className="font-heading text-xl font-600 text-foreground group-hover:text-primary-foreground mb-3 transition-colors duration-500">
+                  {service.title}
+                </h3>
+                <p className="font-body text-sm font-300 text-muted-foreground group-hover:text-primary-foreground/80 leading-relaxed transition-colors duration-500">
+                  {service.description}
+                </p>
               </div>
-              <span className="absolute top-6 right-6 font-body text-xs text-muted-foreground/40 group-hover:text-primary-foreground/60 font-500 transition-colors duration-500">
-                {String(i + 1).padStart(2, "0")}
-              </span>
-              <h3 className="font-heading text-xl font-600 text-foreground group-hover:text-primary-foreground mb-3 transition-colors duration-500">
-                {service.title}
-              </h3>
-              <p className="font-body text-sm font-300 text-muted-foreground group-hover:text-primary-foreground/80 leading-relaxed transition-colors duration-500">
-                {service.description}
-              </p>
             </motion.div>
           ))}
         </div>
