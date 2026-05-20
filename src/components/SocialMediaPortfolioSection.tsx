@@ -7,6 +7,7 @@ import sanghviMockup from "@/assets/sanghvi-mockup.png";
 import metroCarsMockup from "@/assets/metro-cars-mockup.png";
 import bombayJewellersMockup from "@/assets/bombay-jewellers-mockup.png";
 import sairajendraMockup from "@/assets/sairajendra-mockup.png";
+import socialMediaHeroMockup from "@/assets/social-media-hero-mockup.png";
 
 type Client = {
   name: string;
@@ -466,39 +467,17 @@ const SocialMediaPortfolioSection = () => {
         {/* Hero composition */}
         <div className="mb-24 grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-8 items-center">
           {/* Left: phone + floating creative cards */}
-          <div className="relative h-[460px] md:h-[560px] order-2 lg:order-1">
-            {/* soft podium / gradient backdrop */}
-            <div className="absolute inset-0 rounded-[2rem] bg-gradient-to-br from-sky-100 via-white to-sky-50" />
-            <div className="absolute bottom-12 left-1/2 -translate-x-1/2 w-[70%] h-10 rounded-full bg-sky-200/60 blur-2xl" />
-
-            {/* floating creative cards (hidden on small screens to avoid clutter) */}
-            <div className="hidden md:block absolute inset-0">
-              {heroFloatingCards.map((c) => (
-                <motion.div
-                  key={c.label}
-                  className={c.className}
-                  initial={{ opacity: 0, y: 30, scale: 0.9 }}
-                  whileInView={{ opacity: 1, y: 0, scale: 1 }}
-                  viewport={{ once: true, amount: 0.2 }}
-                  transition={{ duration: 0.8, delay: c.delay, ease: [0.22, 1, 0.36, 1] }}
-                >
-                  <div className="rounded-xl overflow-hidden shadow-[0_20px_40px_-15px_rgba(0,0,0,0.35)] ring-1 ring-black/5 bg-white">
-                    <img src={c.src} alt={c.label} className="w-full aspect-square object-cover" loading="lazy" />
-                  </div>
-                </motion.div>
-              ))}
-            </div>
-
-            {/* phone */}
-            <motion.div
-              className="relative z-10 flex h-full items-center justify-center"
+          <div className="relative order-2 lg:order-1 flex items-center justify-center">
+            <motion.img
+              src={socialMediaHeroMockup}
+              alt="Social media marketing mockup with phone and platform icons"
+              className="w-full max-w-[520px] h-auto object-contain"
+              loading="lazy"
               initial={{ opacity: 0, y: 40 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, amount: 0.2 }}
               transition={{ duration: 0.9, ease: [0.22, 1, 0.36, 1] }}
-            >
-              <HeroPhoneMockup />
-            </motion.div>
+            />
           </div>
 
           {/* Right: headline */}
