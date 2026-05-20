@@ -3,7 +3,7 @@ import Navigation from "@/components/Navigation";
 import ScrollProgress from "@/components/ScrollProgress";
 import HeroSection from "@/components/HeroSection";
 import ServicesSection from "@/components/ServicesSection";
-import SocialMediaSection from "@/components/SocialMediaSection";
+// import SocialMediaSection from "@/components/SocialMediaSection";
 import SocialMediaPortfolioSection from "@/components/SocialMediaPortfolioSection";
 import SeoSection from "@/components/SeoSection";
 import SeoPortfolioSection from "@/components/SeoPortfolioSection";
@@ -41,7 +41,7 @@ const Index = () => {
       <ServicesSection />
       <PortfolioSection />
       <ContentCreationSection />
-      <SocialMediaSection />
+      {/* <SocialMediaSection /> */}
       <SocialMediaPortfolioSection />
       <SeoSection />
       <SeoPortfolioSection />
