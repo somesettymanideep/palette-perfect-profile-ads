@@ -25,6 +25,7 @@ type Client = {
   fbPosts: { caption: string; likes: string; comments: string; shares: string }[];
   results: { value: string; label: string }[];
   mockupImage?: string;
+  flipMockup?: boolean;
 };
 
 const metroCover =
