@@ -347,6 +347,74 @@ const FacebookMockup = ({ client }: { client: Client }) => (
   </div>
 );
 
+const heroFloatingCards = [
+  {
+    src: portfolioBlossoms,
+    label: "Blossoms Hospital",
+    className:
+      "absolute left-[-2%] top-[18%] w-[180px] md:w-[220px] -rotate-[8deg]",
+    delay: 0.3,
+  },
+  {
+    src: portfolioJewellery,
+    label: "BSP Jewellery",
+    className:
+      "absolute left-[6%] bottom-[8%] w-[170px] md:w-[210px] rotate-[6deg]",
+    delay: 0.45,
+  },
+  {
+    src: "https://images.unsplash.com/photo-1605559424843-9e4c228bf1c2?w=600&q=80",
+    label: "Metro Cars",
+    className:
+      "absolute right-[8%] top-[10%] w-[170px] md:w-[200px] rotate-[5deg]",
+    delay: 0.6,
+  },
+  {
+    src: "https://images.unsplash.com/photo-1611652022419-a9419f74343d?w=600&q=80",
+    label: "Bridal Edit",
+    className:
+      "absolute right-[-2%] bottom-[14%] w-[160px] md:w-[200px] -rotate-[7deg]",
+    delay: 0.75,
+  },
+];
+
+const HeroPhoneMockup = () => (
+  <div className="relative mx-auto w-[260px] md:w-[300px]">
+    <div className="bg-[#0d0d0d] rounded-[2.5rem] p-2 shadow-[0_40px_80px_-20px_rgba(0,0,0,0.55)] ring-1 ring-black/10">
+      <div className="absolute top-2 left-1/2 -translate-x-1/2 w-24 h-5 bg-[#0d0d0d] rounded-b-2xl z-20" />
+      <div className="relative rounded-[2rem] overflow-hidden bg-white aspect-[9/19]">
+        <div className="flex items-center justify-between px-4 py-2 border-b border-gray-200">
+          <span className="font-700 text-[12px] text-black">bisaurabrand</span>
+          <MoreHorizontal className="w-4 h-4 text-black" />
+        </div>
+        <div className="px-4 pt-4">
+          <div className="flex items-center gap-4">
+            <div className="w-14 h-14 rounded-full p-[2px] bg-gradient-to-tr from-primary to-amber-500">
+              <div className="w-full h-full rounded-full bg-white p-[2px]">
+                <img src={portfolioJewellery} alt="" className="w-full h-full rounded-full object-cover" />
+              </div>
+            </div>
+            <div className="flex-1 grid grid-cols-3 text-center text-black">
+              <div><div className="text-[12px] font-700">248</div><div className="text-[9px] text-gray-500">posts</div></div>
+              <div><div className="text-[12px] font-700">42K</div><div className="text-[9px] text-gray-500">followers</div></div>
+              <div><div className="text-[12px] font-700">184</div><div className="text-[9px] text-gray-500">following</div></div>
+            </div>
+          </div>
+          <div className="mt-2 text-[11px] font-700 text-black">Your Brand</div>
+          <div className="text-[9px] text-gray-600 leading-snug">Premium design · Daily posts · Real growth</div>
+        </div>
+        <div className="mt-3 grid grid-cols-3 gap-[2px] px-0">
+          {[portfolioBlossoms, portfolioJewellery, "https://images.unsplash.com/photo-1605559424843-9e4c228bf1c2?w=300&q=70", "https://images.unsplash.com/photo-1611652022419-a9419f74343d?w=300&q=70", "https://images.unsplash.com/photo-1599643478518-a784e5dc4c8f?w=300&q=70", "https://images.unsplash.com/photo-1503376780353-7e6692767b70?w=300&q=70"].map((s, i) => (
+            <div key={i} className="aspect-square overflow-hidden bg-gray-100">
+              <img src={s} alt="" className="w-full h-full object-cover" loading="lazy" />
+            </div>
+          ))}
+        </div>
+      </div>
+    </div>
+  </div>
+);
+
 const SocialMediaPortfolioSection = () => {
   return (
     <section id="social-portfolio" className="py-32 bg-off-white relative overflow-hidden">
@@ -365,38 +433,78 @@ const SocialMediaPortfolioSection = () => {
       />
 
       <div className="container-wide relative z-10">
-        {/* Header */}
-        <div className="mb-20 max-w-4xl">
-          <motion.div
-            className="flex items-center gap-3 mb-5"
-            initial={{ opacity: 0, x: -10 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6 }}
-          >
-            <span aria-hidden className="h-px w-10 bg-primary" />
-            <p className="font-body text-xs md:text-sm uppercase tracking-[0.25em] text-primary font-700">
-              Social Media Marketing
-            </p>
-          </motion.div>
-          <motion.h2
-            className="font-heading text-4xl md:text-6xl font-600 text-charcoal leading-tight"
-            initial={{ opacity: 0, y: 40 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.8, ease: [0.22, 1, 0.36, 1] }}
-          >
-            Pages That <span className="text-primary">Convert Followers</span> Into Customers
-          </motion.h2>
-          <motion.p
-            className="font-body text-base md:text-lg text-charcoal/70 leading-relaxed mt-6 max-w-2xl"
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.7, delay: 0.2 }}
-          >
-            From profile design to daily posting — we run Instagram & Facebook pages that build real audiences and drive measurable business growth.
-          </motion.p>
+        {/* Hero composition */}
+        <div className="mb-24 grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-8 items-center">
+          {/* Left: phone + floating creative cards */}
+          <div className="relative h-[460px] md:h-[560px] order-2 lg:order-1">
+            {/* soft podium / gradient backdrop */}
+            <div className="absolute inset-0 rounded-[2rem] bg-gradient-to-br from-sky-100 via-white to-sky-50" />
+            <div className="absolute bottom-12 left-1/2 -translate-x-1/2 w-[70%] h-10 rounded-full bg-sky-200/60 blur-2xl" />
+
+            {/* floating creative cards (hidden on small screens to avoid clutter) */}
+            <div className="hidden md:block absolute inset-0">
+              {heroFloatingCards.map((c) => (
+                <motion.div
+                  key={c.label}
+                  className={c.className}
+                  initial={{ opacity: 0, y: 30, scale: 0.9 }}
+                  whileInView={{ opacity: 1, y: 0, scale: 1 }}
+                  viewport={{ once: true, amount: 0.2 }}
+                  transition={{ duration: 0.8, delay: c.delay, ease: [0.22, 1, 0.36, 1] }}
+                >
+                  <div className="rounded-xl overflow-hidden shadow-[0_20px_40px_-15px_rgba(0,0,0,0.35)] ring-1 ring-black/5 bg-white">
+                    <img src={c.src} alt={c.label} className="w-full aspect-square object-cover" loading="lazy" />
+                  </div>
+                </motion.div>
+              ))}
+            </div>
+
+            {/* phone */}
+            <motion.div
+              className="relative z-10 flex h-full items-center justify-center"
+              initial={{ opacity: 0, y: 40 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, amount: 0.2 }}
+              transition={{ duration: 0.9, ease: [0.22, 1, 0.36, 1] }}
+            >
+              <HeroPhoneMockup />
+            </motion.div>
+          </div>
+
+          {/* Right: headline */}
+          <div className="order-1 lg:order-2 lg:pl-8">
+            <motion.div
+              className="flex items-center gap-3 mb-5"
+              initial={{ opacity: 0, x: -10 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.6 }}
+            >
+              <span aria-hidden className="h-px w-10 bg-primary" />
+              <p className="font-body text-xs md:text-sm uppercase tracking-[0.25em] text-primary font-700">
+                Social Media Marketing
+              </p>
+            </motion.div>
+            <motion.h2
+              className="font-heading text-5xl md:text-6xl lg:text-7xl font-600 text-charcoal leading-[1.05]"
+              initial={{ opacity: 0, y: 40 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.8, ease: [0.22, 1, 0.36, 1] }}
+            >
+              Get <span className="text-primary">Quality</span> Social Media{" "}
+              <span className="text-primary">Designs</span> for Your <span className="italic">Brand</span>
+            </motion.h2>
+            <motion.p
+              className="font-body text-base md:text-lg text-charcoal/70 leading-relaxed mt-6 max-w-xl"
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.7, delay: 0.2 }}
+            >
+              From profile design to daily posting — we craft scroll-stopping creatives that turn followers into loyal customers.
+            </motion.p>
+          </div>
         </div>
 
         {/* Per-client side-by-side mockups */}
