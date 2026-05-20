@@ -3,6 +3,7 @@ import { Heart, MessageCircle, Send, Bookmark, MoreHorizontal, Search, Home, Plu
 import portfolioBlossoms from "@/assets/portfolio-blossoms.jpg";
 import portfolioJewellery from "@/assets/portfolio-bsp-jewellery.jpg";
 import vijayaMockup from "@/assets/vijaya-mockup.png";
+import sanghviMockup from "@/assets/sanghvi-mockup.png";
 
 type Client = {
   name: string;
@@ -181,6 +182,27 @@ const clients: Client[] = [
       { value: "492", label: "Followers" },
     ],
     mockupImage: vijayaMockup,
+  },
+  {
+    name: "Sanghvi Car Shoppee",
+    industry: "Automotive",
+    handle: "sanghvi_car_shoppee",
+    fbName: "Sanghvi Car Shoppee",
+    cover: portfolioBlossoms,
+    accent: "from-primary to-[hsl(var(--primary)/0.7)]",
+    bio: "Vadodara's Trusted Pre-Owned Car Dealership\nPremium Brands · Certified Quality · Easy Finance",
+    posts: 1214,
+    followers: "14.4K",
+    following: 516,
+    likes: "0",
+    grid: [],
+    fbPosts: [],
+    results: [
+      { value: "+312%", label: "Page Reach" },
+      { value: "3.6×", label: "Inquiries" },
+      { value: "14.4K", label: "Followers" },
+    ],
+    mockupImage: sanghviMockup,
   },
 ];
 
