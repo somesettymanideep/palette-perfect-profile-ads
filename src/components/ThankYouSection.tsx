@@ -74,7 +74,7 @@ const ThankYouSection = () => {
 
             {/* WhatsApp */}
             <a
-              href="https://wa.me/917386909994"
+              href="https://wa.me/919550860545"
               target="_blank"
               rel="noopener noreferrer"
               className="mt-6 inline-flex items-center gap-2 bg-[#25D366] text-white px-5 py-2.5 rounded-full font-heading font-600 text-sm hover:scale-105 transition-transform"
