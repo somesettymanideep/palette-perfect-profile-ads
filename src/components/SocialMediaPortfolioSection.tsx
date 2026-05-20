@@ -171,7 +171,7 @@ const InstagramMockup = ({ client }: { client: Client }) => {
         <img
           src={client.mockupImage}
           alt={`${client.name} Instagram mockup`}
-          className="w-full h-auto object-contain"
+          className={`w-full h-auto object-contain ${client.flipMockup ? "scale-x-[-1]" : ""}`}
           loading="lazy"
         />
       </div>
