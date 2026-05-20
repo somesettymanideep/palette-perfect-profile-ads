@@ -114,21 +114,7 @@ const PhoneMockup = ({ image, name }: { image: string; name: string }) => (
 const SocialMediaSection = () => {
   return (
     <section className="py-32 relative overflow-hidden bg-primary">
-      {/* Decorative orbs in brand tones */}
-      <div className="absolute -top-32 -left-32 w-[500px] h-[500px] rounded-full bg-off-white/10 blur-3xl pointer-events-none" />
-      <div className="absolute -bottom-32 -right-32 w-[500px] h-[500px] rounded-full bg-charcoal/30 blur-3xl pointer-events-none" />
-      {/* Subtle dot grid pattern */}
-      <div
-        className="absolute inset-0 opacity-[0.18] pointer-events-none"
-        style={{
-          backgroundImage:
-            "radial-gradient(hsl(var(--charcoal)) 1px, transparent 1px)",
-          backgroundSize: "22px 22px",
-        }}
-      />
-      {/* Soft top + bottom fades for depth */}
-      <div className="absolute inset-x-0 top-0 h-32 bg-gradient-to-b from-charcoal/15 to-transparent pointer-events-none" />
-      <div className="absolute inset-x-0 bottom-0 h-32 bg-gradient-to-t from-charcoal/15 to-transparent pointer-events-none" />
+
 
 
 
