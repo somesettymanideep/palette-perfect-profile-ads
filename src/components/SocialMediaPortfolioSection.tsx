@@ -25,7 +25,6 @@ type Client = {
   fbPosts: { caption: string; likes: string; comments: string; shares: string }[];
   results: { value: string; label: string }[];
   mockupImage?: string;
-  flipMockup?: boolean;
 };
 
 const metroCover =
@@ -73,7 +72,6 @@ const clients: Client[] = [
       { value: "5.2K", label: "Followers" },
     ],
     mockupImage: sairajendraMockup,
-    flipMockup: true,
   },
   {
     name: "Metro Cars",
@@ -141,7 +139,6 @@ const clients: Client[] = [
       { value: "492", label: "Followers" },
     ],
     mockupImage: vijayaMockup,
-    flipMockup: true,
   },
   {
     name: "Sanghvi Car Shoppee",
@@ -163,7 +160,6 @@ const clients: Client[] = [
       { value: "14.4K", label: "Followers" },
     ],
     mockupImage: sanghviMockup,
-    flipMockup: true,
   },
 ];
 
@@ -174,7 +170,7 @@ const InstagramMockup = ({ client }: { client: Client }) => {
         <img
           src={client.mockupImage}
           alt={`${client.name} Instagram mockup`}
-          className={`w-full h-auto object-contain ${client.flipMockup ? "scale-x-[-1]" : ""}`}
+          className="w-full h-auto object-contain"
           loading="lazy"
         />
       </div>
