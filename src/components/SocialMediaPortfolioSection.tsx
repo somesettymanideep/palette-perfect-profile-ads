@@ -295,7 +295,9 @@ const InstagramMockup = ({ client }: { client: Client }) => {
       </div>
     </div>
   </div>
-);
+  </div>
+  );
+};
 
 const FacebookMockup = ({ client }: { client: Client }) => (
   <div className="relative mx-auto w-full max-w-[420px] rounded-2xl overflow-hidden bg-white shadow-[0_30px_60px_-15px_rgba(0,0,0,0.6)] ring-1 ring-off-white/10">
