@@ -2,6 +2,7 @@ import { motion } from "framer-motion";
 import { Heart, MessageCircle, Send, Bookmark, MoreHorizontal, Search, Home, PlusSquare, Film, User, ThumbsUp, Share2, Globe } from "lucide-react";
 import portfolioBlossoms from "@/assets/portfolio-blossoms.jpg";
 import portfolioJewellery from "@/assets/portfolio-bsp-jewellery.jpg";
+import vijayaMockup from "@/assets/vijaya-mockup.png";
 
 type Client = {
   name: string;
