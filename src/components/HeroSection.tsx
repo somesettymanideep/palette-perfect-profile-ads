@@ -1,5 +1,7 @@
 import { motion, useScroll, useTransform } from "framer-motion";
 import { useRef } from "react";
+import heroChess from "@/assets/hero-chess-social.png";
+
 
 const HeroSection = () => {
   const ref = useRef<HTMLElement>(null);
@@ -102,7 +104,29 @@ const HeroSection = () => {
             />
           </motion.div>
         </div>
+
+        {/* Right-side floating chess image */}
+        <motion.div
+          className="hidden lg:block absolute right-4 xl:right-16 top-1/2 -translate-y-1/2 w-[38%] max-w-[520px] pointer-events-none"
+          initial={{ opacity: 0, x: 80, scale: 0.85 }}
+          animate={{ opacity: 1, x: 0, scale: 1 }}
+          transition={{ duration: 1.2, delay: 0.6, ease: [0.22, 1, 0.36, 1] }}
+        >
+          <motion.img
+            src={heroChess}
+            alt="Social media king — ADS dominates digital marketing"
+            className="w-full h-auto drop-shadow-[0_30px_60px_rgba(0,0,0,0.5)]"
+            animate={{ y: [0, -18, 0], rotate: [0, 1.5, 0] }}
+            transition={{ duration: 6, repeat: Infinity, ease: "easeInOut" }}
+          />
+          <motion.div
+            className="absolute inset-0 -z-10 rounded-full bg-primary/20 blur-3xl"
+            animate={{ scale: [1, 1.15, 1], opacity: [0.4, 0.7, 0.4] }}
+            transition={{ duration: 5, repeat: Infinity, ease: "easeInOut" }}
+          />
+        </motion.div>
       </motion.div>
+
     </section>
   );
 };
