@@ -17,13 +17,13 @@ import {
 
 const searchAds = [
   {
-    url: "blossomshospital.in",
-    title: "Blossoms Hospital — 24×7 Multispeciality Care in Bengaluru",
+    url: "www.blossomscare.in",
+    title: "Blossoms Hospital — 24×7 Multispeciality Care in Vijayawada",
     desc: "Top-rated doctors, advanced diagnostics & cashless insurance. Book an appointment in 2 minutes.",
     cta: "Book Appointment",
   },
   {
-    url: "blossomshospital.in",
+    url: "www.blossomscare.in",
     title: "Emergency & ICU — Call Now · No Waiting",
     desc: "24/7 emergency response, ambulance pickup and dedicated ICU specialists across all units.",
     cta: "Call Hospital",
@@ -103,7 +103,7 @@ const GoogleAdsPortfolioSection = () => {
               </h3>
               <p className="font-body text-base text-off-white/60 leading-relaxed mb-8 max-w-md">
                 Hyper-targeted search ads with locked-in #1 ad position for the highest-intent
-                healthcare keywords across Bengaluru.
+                healthcare keywords across Vijayawada.
               </p>
 
               <div className="grid grid-cols-3 gap-4 mb-8 border-y border-off-white/10 py-5 max-w-md">
