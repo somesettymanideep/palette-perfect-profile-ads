@@ -28,7 +28,7 @@ const stats: Stat[] = [
   { number: 1500, suffix: "+", label: "Avg. Leads / Month", caption: "Qualified pipeline", icon: TrendingUp, delta: "+184%", bars: [40, 55, 50, 68, 75, 82, 90] },
   { number: 500, suffix: "+", label: "Campaigns / Month", caption: "Always-on execution", icon: Megaphone, delta: "+96%", bars: [35, 42, 50, 48, 62, 70, 78] },
   { number: 6, suffix: "M+", label: "Total Reach", caption: "Global audience touched", icon: Eye, delta: "+220%", bars: [25, 35, 48, 55, 60, 72, 85] },
-  { number: 50, suffix: "+", label: "Brands Partnered", caption: "Long-term collaborations", icon: Users, delta: "+40%", bars: [50, 55, 58, 62, 68, 72, 78] },
+  { number: 100, suffix: "+", label: "Brands", caption: "Long-term collaborations", icon: Users, delta: "+40%", bars: [50, 55, 58, 62, 68, 72, 78] },
 ];
 
 const Counter = ({ target, prefix, suffix }: { target: number; prefix?: string; suffix: string }) => {
