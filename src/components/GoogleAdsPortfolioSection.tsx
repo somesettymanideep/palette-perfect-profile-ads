@@ -351,23 +351,22 @@ const GoogleAdsPortfolioSection = () => {
               className="lg:col-span-5 order-1 lg:order-2"
             >
               <p className="font-body text-xs uppercase tracking-[0.2em] text-primary/80 mb-4 font-700">
-                Shopping Campaign · BSP Golds & Diamonds
+                Shopping Campaign · Rasrin
               </p>
               <h3 className="font-heading text-3xl md:text-4xl font-600 text-off-white leading-tight mb-6">
-                Product feeds engineered for <span className="text-primary">festive demand</span>
+                Cleaning products that <span className="text-primary">dominate</span> search shelves
               </h3>
               <p className="font-body text-base text-off-white/60 leading-relaxed mb-8 max-w-md">
-                We structured a high-converting Merchant Center feed and ran Performance Max campaigns
-                that doubled festive-season revenue.
+                We built a high-converting Google Shopping feed for Rasrin's household cleaning range and ran Performance Max campaigns that scaled revenue to ₹48 Lakhs in ad-driven sales.
               </p>
 
               <div className="grid grid-cols-3 gap-4 mb-8 border-y border-off-white/10 py-5 max-w-md">
                 <div>
                   <div className="font-heading text-2xl md:text-3xl font-600 text-primary leading-none">
-                    2.1×
+                    ₹48L
                   </div>
                   <div className="font-body text-[10px] uppercase tracking-wider text-off-white/40 mt-2">
-                    Sales Lift
+                    Ad Sales
                   </div>
                 </div>
                 <div>
@@ -380,7 +379,7 @@ const GoogleAdsPortfolioSection = () => {
                 </div>
                 <div>
                   <div className="font-heading text-2xl md:text-3xl font-600 text-primary leading-none">
-                    480+
+                    320+
                   </div>
                   <div className="font-body text-[10px] uppercase tracking-wider text-off-white/40 mt-2">
                     SKUs Live
@@ -393,7 +392,7 @@ const GoogleAdsPortfolioSection = () => {
                   "Merchant Center feed optimisation",
                   "Performance Max + Shopping campaigns",
                   "Audience signals & remarketing lists",
-                  "Festive seasonal bid strategies",
+                  "Category-level bid strategies",
                 ].map((t) => (
                   <li key={t} className="flex items-start gap-3 text-sm text-off-white/80">
                     <CheckCircle2 className="w-4 h-4 text-primary mt-0.5 shrink-0" />
