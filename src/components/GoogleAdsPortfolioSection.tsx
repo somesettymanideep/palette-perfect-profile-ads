@@ -413,20 +413,21 @@ const GoogleAdsPortfolioSection = () => {
               className="lg:col-span-5"
             >
               <p className="font-body text-xs uppercase tracking-[0.2em] text-primary/80 mb-4 font-700">
-                YouTube Campaign · NutriomFit
+                YouTube Campaign · Rasrin
               </p>
               <h3 className="font-heading text-3xl md:text-4xl font-600 text-off-white leading-tight mb-6">
-                Skippable in-stream ads with <span className="text-primary">94% view rate</span>
+                Product-demo video ads that <span className="text-primary">sell while they educate</span>
               </h3>
               <p className="font-body text-base text-off-white/60 leading-relaxed mb-8 max-w-md">
-                Hook-driven 15s creatives served to in-market wellness audiences across YouTube
-                Shorts and in-stream placements.
+                A 47-second demo of Rasrin D-Scaler — the washing machine drum cleaner — served as
+                skippable in-stream and bumper ads to households actively searching for laundry
+                and cleaning solutions.
               </p>
 
               <div className="grid grid-cols-3 gap-4 mb-8 border-y border-off-white/10 py-5 max-w-md">
                 <div>
                   <div className="font-heading text-2xl md:text-3xl font-600 text-primary leading-none">
-                    2.4M
+                    3.1M
                   </div>
                   <div className="font-body text-[10px] uppercase tracking-wider text-off-white/40 mt-2">
                     Impressions
@@ -434,7 +435,7 @@ const GoogleAdsPortfolioSection = () => {
                 </div>
                 <div>
                   <div className="font-heading text-2xl md:text-3xl font-600 text-primary leading-none">
-                    94%
+                    91%
                   </div>
                   <div className="font-body text-[10px] uppercase tracking-wider text-off-white/40 mt-2">
                     View Rate
@@ -442,7 +443,7 @@ const GoogleAdsPortfolioSection = () => {
                 </div>
                 <div>
                   <div className="font-heading text-2xl md:text-3xl font-600 text-primary leading-none">
-                    ₹0.48
+                    ₹0.32
                   </div>
                   <div className="font-body text-[10px] uppercase tracking-wider text-off-white/40 mt-2">
                     Avg. CPV
@@ -452,10 +453,10 @@ const GoogleAdsPortfolioSection = () => {
 
               <ul className="space-y-3">
                 {[
-                  "Hook-first 6s & 15s creative cuts",
-                  "Affinity & in-market audience targeting",
-                  "Action-format YouTube ads",
-                  "Remarketing to engaged viewers",
+                  "Problem-solution demo storyboard",
+                  "In-market: laundry & home cleaning audiences",
+                  "Skippable in-stream + 6s bumper cuts",
+                  "Remarketing to drum-cleaner search intent",
                 ].map((t) => (
                   <li key={t} className="flex items-start gap-3 text-sm text-off-white/80">
                     <CheckCircle2 className="w-4 h-4 text-primary mt-0.5 shrink-0" />
@@ -486,54 +487,19 @@ const GoogleAdsPortfolioSection = () => {
                     </div>
                     <div className="flex-1 flex items-center gap-2 px-3 py-1.5 rounded-full bg-[#121212] border border-white/10">
                       <Search className="w-3 h-3 text-white/50" />
-                      <span className="font-body text-[11px] text-white/60">yoga for weight loss</span>
+                      <span className="font-body text-[11px] text-white/60">washing machine drum cleaner</span>
                     </div>
                   </div>
 
                   {/* Video player */}
-                  <div className="relative aspect-video">
-                    <div
-                      className="absolute inset-0"
-                      style={{
-                        background:
-                          "linear-gradient(135deg, #2d4f3a 0%, #5d8a6d 50%, #f0e6d2 100%)",
-                      }}
+                  <div className="relative aspect-video bg-black">
+                    <iframe
+                      className="absolute inset-0 w-full h-full"
+                      src="https://www.youtube.com/embed/gE4N2DFAX7s?rel=0&modestbranding=1"
+                      title="Rasrin D-Scaler — Washing Machine Drum Cleaner"
+                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                      allowFullScreen
                     />
-                    <div className="absolute inset-0 bg-black/30" />
-
-                    {/* Sponsored badge */}
-                    <span className="absolute top-3 left-3 font-body text-[10px] font-700 text-white bg-black/70 px-2 py-1 rounded">
-                      Ad · NutriomFit
-                    </span>
-
-                    {/* Skip button */}
-                    <div className="absolute bottom-12 right-0 bg-black/70 text-white text-[11px] font-600 px-3 py-2 border-l border-t border-b border-white/30 rounded-l-md flex items-center gap-1">
-                      Skip Ad <span className="text-white/60">▶</span>
-                    </div>
-
-                    {/* Play button center */}
-                    <motion.div
-                      initial={{ scale: 0.6, opacity: 0 }}
-                      whileInView={{ scale: 1, opacity: 1 }}
-                      viewport={{ once: true }}
-                      transition={{ duration: 0.5, delay: 0.4, type: "spring" }}
-                      className="absolute inset-0 flex items-center justify-center"
-                    >
-                      <span className="w-14 h-14 rounded-full bg-[#FF0000] flex items-center justify-center shadow-2xl">
-                        <Play className="w-6 h-6 text-white ml-1" fill="white" />
-                      </span>
-                    </motion.div>
-
-                    {/* Progress bar */}
-                    <div className="absolute bottom-0 left-0 right-0 h-1 bg-white/20">
-                      <motion.div
-                        initial={{ width: 0 }}
-                        whileInView={{ width: "42%" }}
-                        viewport={{ once: true }}
-                        transition={{ duration: 1.2, delay: 0.5 }}
-                        className="h-full bg-[#FF0000]"
-                      />
-                    </div>
                   </div>
 
                   {/* Ad CTA strip */}
@@ -543,14 +509,14 @@ const GoogleAdsPortfolioSection = () => {
                     </span>
                     <div className="flex-1 min-w-0">
                       <div className="font-heading text-[12px] font-600 text-white truncate">
-                        Transform Your Body in 90 Days
+                        Rasrin D-Scaler · Removes Drum Scale Instantly
                       </div>
                       <div className="font-body text-[10px] text-white/50 truncate">
-                        nutriomfit.com · Free consultation
+                        rasrin.com · Shop now
                       </div>
                     </div>
                     <span className="font-body text-[10px] font-700 text-white bg-[#3ea6ff]/90 px-3 py-1.5 rounded">
-                      Book Now
+                      Shop Now
                     </span>
                   </div>
                 </div>
@@ -564,8 +530,8 @@ const GoogleAdsPortfolioSection = () => {
                 >
                   <ArrowUpRight className="w-5 h-5 text-primary" />
                   <div>
-                    <div className="font-heading text-lg font-700 leading-none">+180%</div>
-                    <div className="font-body text-[9px] uppercase tracking-wider">Consultations</div>
+                    <div className="font-heading text-lg font-700 leading-none">+220%</div>
+                    <div className="font-body text-[9px] uppercase tracking-wider">Product Orders</div>
                   </div>
                 </motion.div>
               </div>
