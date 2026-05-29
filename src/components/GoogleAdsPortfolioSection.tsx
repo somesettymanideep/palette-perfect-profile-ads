@@ -14,6 +14,7 @@ import {
   ShoppingBag,
   CheckCircle2,
 } from "lucide-react";
+import rasrinShoppingAds from "@/assets/rasrin-shopping-ads.png";
 
 const searchAds = [
   {
@@ -302,7 +303,7 @@ const GoogleAdsPortfolioSection = () => {
             >
               <div className="absolute -inset-12 bg-primary/15 blur-3xl rounded-full pointer-events-none" />
 
-              <div className="relative mx-auto" style={{ maxWidth: "560px" }}>
+              <div className="relative mx-auto" style={{ maxWidth: "640px" }}>
                 <div className="relative bg-white rounded-2xl shadow-2xl overflow-hidden border border-off-white/10">
                   <div className="flex items-center gap-2 px-4 py-3 bg-gray-100 border-b border-gray-200">
                     <div className="flex gap-1.5">
@@ -313,66 +314,17 @@ const GoogleAdsPortfolioSection = () => {
                     <div className="flex-1 mx-3 flex items-center gap-2 px-3 py-1.5 rounded-md bg-white border border-gray-200">
                       <Lock className="w-3 h-3 text-gray-400" />
                       <span className="font-body text-[11px] text-gray-600 truncate">
-                        google.com/search?q=bridal+diamond+jewellery
+                        google.com/search?q=rasrin+cleaning+products
                       </span>
                     </div>
                   </div>
 
-                  <div className="p-5 bg-white">
-                    <div className="flex items-center justify-between pb-3 border-b border-gray-200 mb-4">
-                      <div className="flex items-center gap-2">
-                        <ShoppingBag className="w-4 h-4" style={{ color: "#1a73e8" }} />
-                        <span className="font-body text-[12px] font-700 text-gray-900">
-                          Shopping ads · BSP Golds & Diamonds
-                        </span>
-                      </div>
-                      <span className="text-[10px] text-gray-500">Sponsored</span>
-                    </div>
-
-                    <div className="grid grid-cols-2 md:grid-cols-4 gap-3">
-                      {shoppingAds.map((p, i) => (
-                        <motion.div
-                          key={p.name}
-                          initial={{ opacity: 0, y: 12 }}
-                          whileInView={{ opacity: 1, y: 0 }}
-                          viewport={{ once: true }}
-                          transition={{ duration: 0.4, delay: 0.3 + i * 0.08 }}
-                          className={`border rounded-lg p-2 ${
-                            i === 0 ? "border-primary/40 ring-1 ring-primary/30" : "border-gray-200"
-                          }`}
-                        >
-                          <div
-                            className="aspect-square rounded-md mb-2 relative overflow-hidden"
-                            style={{
-                              background:
-                                "linear-gradient(135deg, #f5e9c8 0%, #d4af37 50%, #b8860b 100%)",
-                            }}
-                          >
-                            <div className="absolute inset-0 opacity-30 mix-blend-overlay" style={{
-                              backgroundImage:
-                                "radial-gradient(circle at 30% 30%, rgba(255,255,255,0.8), transparent 50%)",
-                            }} />
-                            {i === 0 && (
-                              <span className="absolute top-1 left-1 text-[8px] font-700 text-white bg-primary px-1.5 py-0.5 rounded">
-                                BEST
-                              </span>
-                            )}
-                          </div>
-                          <div className="font-heading text-[11px] font-600 text-gray-900 leading-tight line-clamp-2 mb-1">
-                            {p.name}
-                          </div>
-                          <div className="font-heading text-[12px] font-700 text-gray-900">
-                            {p.price}
-                          </div>
-                          <div className="flex items-center gap-0.5 mt-0.5">
-                            <Star className="w-2.5 h-2.5" style={{ color: "#FBBC05", fill: "#FBBC05" }} />
-                            <span className="text-[10px] text-gray-600">{p.rating}</span>
-                          </div>
-                          <div className="text-[9px] text-gray-500 mt-0.5 truncate">BSP Jewellery</div>
-                        </motion.div>
-                      ))}
-                    </div>
-                  </div>
+                  <img
+                    src={rasrinShoppingAds}
+                    alt="Rasrin product feed shopping ads"
+                    className="w-full h-auto block"
+                    loading="lazy"
+                  />
                 </div>
 
                 <motion.div
