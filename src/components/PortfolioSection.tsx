@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 import portfolioBlossoms from "@/assets/portfolio-blossoms.jpg";
-import portfolioJewellery from "@/assets/portfolio-bsp-jewellery.jpg";
+import portfolioPrimeSolutions from "@/assets/portfolio-prime-solutions.png.asset.json";
 import portfolioGym from "@/assets/portfolio-nutriomfit-new.jpg";
 import portfolioInteriorsNew from "@/assets/portfolio-interiors-new.png";
 import portfolioJVEngineers from "@/assets/portfolio-jvengineers.png";
