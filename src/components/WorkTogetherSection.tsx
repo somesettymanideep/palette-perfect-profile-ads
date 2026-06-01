@@ -54,7 +54,7 @@ const WorkTogetherSection = () => {
           {/* Right: CTA button + email */}
           <div className="lg:col-span-5 flex flex-col items-start lg:items-end gap-8">
             <motion.a
-              href="mailto:info@ayrondigitalsolutions.in"
+              href="tel:+919550860545"
               className="w-32 h-32 md:w-40 md:h-40 rounded-full bg-primary flex items-center justify-center text-primary-foreground font-heading font-700 text-sm md:text-base uppercase tracking-wider hover:scale-105 transition-transform cursor-pointer"
               initial={{ opacity: 0, scale: 0.7, rotate: -90 }}
               whileInView={{ opacity: 1, scale: 1, rotate: 0 }}
@@ -78,10 +78,17 @@ const WorkTogetherSection = () => {
             >
               <p className="font-body text-sm text-off-white/50 mb-1">Say hello!</p>
               <a
-                href="mailto:info@ayrondigitalsolutions.in"
+                href="mailto:info@ayrondigitalsolutions.com"
                 className="font-heading text-xl md:text-2xl font-600 text-off-white hover:text-primary transition-colors"
               >
-                info@ayrondigitalsolutions.in
+                info@ayrondigitalsolutions.com
+              </a>
+              <p className="font-body text-sm text-off-white/50 mt-3 mb-1">Or call us:</p>
+              <a
+                href="tel:+919550860545"
+                className="font-heading text-xl md:text-2xl font-600 text-off-white hover:text-primary transition-colors"
+              >
+                +91 95508 60545
               </a>
             </motion.div>
           </div>

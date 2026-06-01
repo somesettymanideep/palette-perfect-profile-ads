@@ -52,13 +52,13 @@ const ClientsSection = () => {
             transition={{ duration: 0.6, delay: 0.2 }}
           >
             <p className="font-body text-sm text-primary-foreground/40 leading-relaxed">
-              We are proud to have partnered with over 40+ brands across healthcare,
+              We are proud to have partnered with over 100+ brands across healthcare,
               retail, automotive, hospitality, and more — building lasting relationships
               through impactful digital strategies.
             </p>
             <div className="flex items-center gap-6 mt-6">
               <div>
-                <span className="font-heading text-4xl font-700 text-primary">40+</span>
+                <span className="font-heading text-4xl font-700 text-primary">100+</span>
                 <p className="font-body text-xs text-primary-foreground/40 uppercase tracking-wider mt-1">Clients</p>
               </div>
               <div className="w-px h-10 bg-primary-foreground/10" />

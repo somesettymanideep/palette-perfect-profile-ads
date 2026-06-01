@@ -59,9 +59,12 @@ const FooterSection = () => {
             <p className="font-body text-sm font-300 text-off-white/60 mb-2">
               Vijayawada, Andhra Pradesh, India
             </p>
-            <p className="font-body text-sm font-300 text-primary">
+            <p className="font-body text-sm font-300 text-primary mb-2">
               info@ayrondigital.com
             </p>
+            <a href="tel:+917386909994" className="font-body text-sm font-300 text-primary hover:text-off-white transition-colors">
+              +91 73869 09994
+            </a>
           </motion.div>
         </div>
         <motion.div
