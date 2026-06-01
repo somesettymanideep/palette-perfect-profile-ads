@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 import portfolioBlossoms from "@/assets/portfolio-blossoms.jpg";
-import portfolioJewellery from "@/assets/portfolio-bsp-jewellery.jpg";
+import portfolioPrimeSolutions from "@/assets/portfolio-prime-solutions.png.asset.json";
 import portfolioGym from "@/assets/portfolio-nutriomfit-new.jpg";
 import portfolioInteriorsNew from "@/assets/portfolio-interiors-new.png";
 import portfolioJVEngineers from "@/assets/portfolio-jvengineers.png";
@@ -16,11 +16,11 @@ const clients = [
     result: "3× increase in patient inquiries through targeted digital campaigns.",
   },
   {
-    name: "BSP Golds & Diamonds",
-    industry: "Jewellery",
-    image: portfolioJewellery,
-    services: ["Web Design", "Social Media Advertising", "SEO"],
-    result: "Built a premium online presence driving 2× footfall during festive seasons.",
+    name: "Prime Solutions",
+    industry: "Supply & Services",
+    image: portfolioPrimeSolutions.url,
+    services: ["Web Design", "Branding", "SEO"],
+    result: "Delivered a premium corporate website showcasing complete supply and service solutions under one roof.",
   },
   {
     name: "NutriomFit",
