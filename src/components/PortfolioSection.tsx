@@ -16,11 +16,11 @@ const clients = [
     result: "3× increase in patient inquiries through targeted digital campaigns.",
   },
   {
-    name: "BSP Golds & Diamonds",
-    industry: "Jewellery",
-    image: portfolioJewellery,
-    services: ["Web Design", "Social Media Advertising", "SEO"],
-    result: "Built a premium online presence driving 2× footfall during festive seasons.",
+    name: "Prime Solutions",
+    industry: "Supply & Services",
+    image: portfolioPrimeSolutions.url,
+    services: ["Web Design", "Branding", "SEO"],
+    result: "Delivered a premium corporate website showcasing complete supply and service solutions under one roof.",
   },
   {
     name: "NutriomFit",
