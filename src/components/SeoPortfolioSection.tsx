@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
 import { MapPin, Star, Search, TrendingUp, CheckCircle2, Globe, ArrowUpRight, Phone, Navigation as NavIcon, Mic, Lock, BarChart3 } from "lucide-react";
+import gmbPediatricImg from "@/assets/gmb-pediatric-vijayawada.webp.asset.json";
 
 const gmbResults = [
   { name: "Anjana Hospital", category: "Multispeciality Hospital · Nandigama", rating: "4.9", reviews: "412", years: "18+ years in business", status: "Open 24 hours" },
