@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
 import { MapPin, Star, Search, TrendingUp, CheckCircle2, Globe, ArrowUpRight, Phone, Navigation as NavIcon, Mic, Lock, BarChart3 } from "lucide-react";
+import gmbPediatricImg from "@/assets/gmb-pediatric-vijayawada.webp.asset.json";
 
 const gmbResults = [
   { name: "Anjana Hospital", category: "Multispeciality Hospital · Nandigama", rating: "4.9", reviews: "412", years: "18+ years in business", status: "Open 24 hours" },
@@ -105,85 +106,15 @@ const SeoPortfolioSection = () => {
                 whileInView={{ y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.8 }}
-                className="relative mx-auto bg-[#0d0d0d] rounded-[2.5rem] p-3 shadow-2xl border border-off-white/10"
+                className="relative mx-auto"
                 style={{ maxWidth: "340px" }}
               >
-                <div className="absolute top-3 left-1/2 -translate-x-1/2 w-28 h-6 bg-[#0d0d0d] rounded-b-2xl z-20" />
-
-                <div className="bg-white rounded-[2rem] overflow-hidden pt-8">
-                  <div className="px-5 pt-4 pb-3">
-                    <div className="flex justify-center mb-3">
-                      <span className="font-heading text-3xl font-700 tracking-tight">
-                        <span style={{ color: "#4285F4" }}>G</span>
-                        <span style={{ color: "#EA4335" }}>o</span>
-                        <span style={{ color: "#FBBC05" }}>o</span>
-                        <span style={{ color: "#4285F4" }}>g</span>
-                        <span style={{ color: "#34A853" }}>l</span>
-                        <span style={{ color: "#EA4335" }}>e</span>
-                      </span>
-                    </div>
-                    <div className="flex items-center gap-2 px-4 py-2 rounded-full border border-gray-200 shadow-sm">
-                      <span className="text-[11px] text-gray-600 flex-1 truncate">best hospital in nandigama</span>
-                      <Search className="w-3.5 h-3.5 text-gray-400" />
-                      <Mic className="w-3.5 h-3.5" style={{ color: "#4285F4" }} />
-                    </div>
-                  </div>
-
-                  <div className="px-3 pb-4 space-y-2 bg-gray-50">
-                    {gmbResults.map((g, i) => (
-                      <motion.div
-                        key={g.name}
-                        initial={{ opacity: 0, y: 12 }}
-                        whileInView={{ opacity: 1, y: 0 }}
-                        viewport={{ once: true }}
-                        transition={{ duration: 0.4, delay: 0.3 + i * 0.12 }}
-                        className={`bg-white rounded-lg p-3 ${
-                          i === 0 ? "ring-2 ring-primary shadow-lg" : "border border-gray-200"
-                        }`}
-                      >
-                        <div className="flex items-start gap-2">
-                          <span
-                            className={`w-5 h-5 rounded-full text-[10px] font-bold flex items-center justify-center shrink-0 ${
-                              i === 0 ? "bg-primary text-white" : "bg-gray-200 text-gray-600"
-                            }`}
-                          >
-                            {i + 1}
-                          </span>
-                          <div className="min-w-0 flex-1">
-                            <div className="font-heading text-[13px] font-700 text-gray-900 leading-tight truncate">
-                              {g.name}
-                            </div>
-                            <div className="flex items-center gap-1 mt-0.5">
-                              <span className="text-[11px] font-semibold text-gray-800">{g.rating}</span>
-                              <div className="flex">
-                                {[...Array(5)].map((_, s) => (
-                                  <Star key={s} className="w-2.5 h-2.5" style={{ color: "#FBBC05", fill: "#FBBC05" }} />
-                                ))}
-                              </div>
-                              <span className="text-[10px] text-gray-500">({g.reviews})</span>
-                            </div>
-                            <div className="text-[10px] text-gray-600 mt-0.5 truncate">{g.category}</div>
-                            <div className="text-[10px] text-gray-500 truncate">{g.years}</div>
-                            <div className="text-[10px] mt-0.5 truncate">
-                              <span style={{ color: "#0F9D58" }} className="font-semibold">{g.status.split("·")[0]}</span>
-                              {g.status.includes("·") && (
-                                <span className="text-gray-500"> · {g.status.split("·")[1]}</span>
-                              )}
-                            </div>
-                          </div>
-                          <div className="flex flex-col gap-1.5 shrink-0">
-                            <div className="w-7 h-7 rounded-full flex items-center justify-center" style={{ backgroundColor: "#E8F0FE" }}>
-                              <Phone className="w-3 h-3" style={{ color: "#4285F4" }} />
-                            </div>
-                            <div className="w-7 h-7 rounded-full flex items-center justify-center" style={{ backgroundColor: "#E8F0FE" }}>
-                              <NavIcon className="w-3 h-3" style={{ color: "#4285F4" }} />
-                            </div>
-                          </div>
-                        </div>
-                      </motion.div>
-                    ))}
-                  </div>
-                </div>
+                <img
+                  src={gmbPediatricImg.url}
+                  alt="Google Search GMB result for best pediatric hospital in Vijayawada — Blossoms Mother & Child Hospital ranking #1"
+                  className="w-full h-auto drop-shadow-2xl"
+                  loading="lazy"
+                />
               </motion.div>
 
               <motion.div
