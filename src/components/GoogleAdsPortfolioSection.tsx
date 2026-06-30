@@ -13,6 +13,13 @@ import {
   Play,
   ShoppingBag,
   CheckCircle2,
+  Eye,
+  Bell,
+  ShoppingCart,
+  MapPin,
+  Zap,
+  BarChart3,
+
 } from "lucide-react";
 import rasrinShoppingAds from "@/assets/rasrin-shopping-ads.png";
 import qcommerceRasrinAsset from "@/assets/qcommerce-rasrin.png.asset.json";
