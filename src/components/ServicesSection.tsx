@@ -73,7 +73,7 @@ const services: Service[] = [
     title: "Q-Commerce",
     description: "Quick-commerce growth on Blinkit, Zepto, Instamart & Swiggy. Listings, visibility ads, and rapid-delivery SKU strategy.",
     icon: Zap,
-    bg: bgGoogleAds,
+    bg: bgQCommerce,
     badge: "New",
   },
 ];
