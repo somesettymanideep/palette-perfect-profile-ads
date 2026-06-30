@@ -103,20 +103,20 @@ const PortfolioSection = () => {
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
           >
-            <span aria-hidden className="h-px w-10 bg-primary-foreground/70" />
-            <p className="font-body text-xs md:text-sm uppercase tracking-[0.25em] text-primary-foreground font-600">
+            <span aria-hidden className="h-px w-10 bg-white/90" />
+            <p className="font-body text-xs md:text-sm uppercase tracking-[0.25em] text-white font-600">
               Our Portfolio
             </p>
           </motion.div>
           <motion.h2
-            className="font-heading text-4xl md:text-6xl font-600 text-primary-foreground leading-tight"
+            className="font-heading text-4xl md:text-6xl font-600 text-white leading-tight"
             initial={{ opacity: 0, y: 40 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.8, ease: [0.22, 1, 0.36, 1] }}
           >
             Web Designs That{" "}
-            <span className="text-charcoal">Deliver</span>
+            <span className="text-[#1a1a1a]">Deliver</span>
           </motion.h2>
         </div>
 
