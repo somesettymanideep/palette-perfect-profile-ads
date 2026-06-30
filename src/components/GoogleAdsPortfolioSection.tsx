@@ -15,6 +15,9 @@ import {
   CheckCircle2,
 } from "lucide-react";
 import rasrinShoppingAds from "@/assets/rasrin-shopping-ads.png";
+import qcommerceRasrinAsset from "@/assets/qcommerce-rasrin.png.asset.json";
+
+const qcommerceRasrin = qcommerceRasrinAsset.url;
 
 const searchAds = [
   {
