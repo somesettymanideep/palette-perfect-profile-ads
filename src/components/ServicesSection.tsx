@@ -23,6 +23,8 @@ type Service = {
   icon?: LucideIcon;
   bg: string;
   badge?: string;
+  bgPosition?: string;
+  overlayClass?: string;
 };
 
 const services: Service[] = [
@@ -75,6 +77,8 @@ const services: Service[] = [
     icon: Zap,
     bg: bgQCommerce,
     badge: "New",
+    bgPosition: "center",
+    overlayClass: "bg-primary/55",
   },
 ];
 
@@ -130,11 +134,11 @@ const ServicesSection = () => {
             >
               {/* Hover background image */}
               <div
-                className="absolute inset-0 bg-cover bg-center opacity-0 group-hover:opacity-100 transition-opacity duration-500 scale-110 group-hover:scale-100"
-                style={{ backgroundImage: `url(${service.bg})` }}
+                className="absolute inset-0 bg-cover bg-no-repeat opacity-0 group-hover:opacity-100 transition-opacity duration-500 scale-105 group-hover:scale-100"
+                style={{ backgroundImage: `url(${service.bg})`, backgroundPosition: service.bgPosition ?? "center" }}
               />
               {/* Overlay */}
-              <div className="absolute inset-0 bg-primary/85 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+              <div className={`absolute inset-0 ${service.overlayClass ?? "bg-primary/85"} opacity-0 group-hover:opacity-100 transition-opacity duration-500`} />
 
               <div className="relative z-10">
                 <div className="w-20 h-20 rounded-lg flex items-center justify-center mb-6 transition-all duration-500">
