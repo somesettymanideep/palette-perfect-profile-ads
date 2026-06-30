@@ -612,6 +612,8 @@ const GoogleAdsPortfolioSection = () => {
         </div>
 
 
+
+
         {/* Bottom stats strip */}
         <motion.div
           className="mt-28 pt-12 border-t border-off-white/10 grid grid-cols-2 md:grid-cols-4 gap-8"
