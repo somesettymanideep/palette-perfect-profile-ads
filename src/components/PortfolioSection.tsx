@@ -64,7 +64,7 @@ const LaptopMockup = ({ image, name }: { image: string; name: string }) => (
           <img
             src={image}
             alt={`${name} website design`}
-            className="w-full h-auto object-cover aspect-[16/10]"
+            className="w-full h-auto object-contain aspect-[16/10] bg-black"
             loading="lazy"
           />
         </div>
