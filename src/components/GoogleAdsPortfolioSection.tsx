@@ -15,6 +15,9 @@ import {
   CheckCircle2,
 } from "lucide-react";
 import rasrinShoppingAds from "@/assets/rasrin-shopping-ads.png";
+import qcommerceRasrinAsset from "@/assets/qcommerce-rasrin.png.asset.json";
+
+const qcommerceRasrin = qcommerceRasrinAsset.url;
 
 const searchAds = [
   {
@@ -537,7 +540,77 @@ const GoogleAdsPortfolioSection = () => {
               </div>
             </motion.div>
           </div>
+
+          {/* ============ ROW 4: Q-COMMERCE ============ */}
+          <div className="grid lg:grid-cols-12 gap-12 lg:gap-16 items-center">
+            <motion.div
+              initial={{ opacity: 0, x: -40 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.7 }}
+              className="lg:col-span-7 relative order-2 lg:order-1"
+            >
+              <div className="absolute -inset-12 bg-primary/15 blur-3xl rounded-full pointer-events-none" />
+              <div className="relative mx-auto" style={{ maxWidth: "640px" }}>
+                <div className="relative bg-white rounded-2xl shadow-2xl overflow-hidden border border-off-white/10">
+                  <img
+                    src={qcommerceRasrin}
+                    alt="Q-Commerce solutions for Blinkit, Zepto and BigBasket"
+                    className="w-full h-auto block"
+                    loading="lazy"
+                  />
+                </div>
+                <motion.div
+                  initial={{ opacity: 0, scale: 0.6, rotate: 8 }}
+                  whileInView={{ opacity: 1, scale: 1, rotate: 6 }}
+                  viewport={{ once: true }}
+                  transition={{ duration: 0.6, delay: 0.6, type: "spring" }}
+                  className="absolute -top-5 -right-3 md:-right-6 bg-primary text-charcoal rounded-2xl px-4 py-3 shadow-2xl flex items-center gap-2"
+                >
+                  <ShoppingBag className="w-5 h-5" />
+                  <div>
+                    <div className="font-heading text-lg font-700 leading-none">10-min</div>
+                    <div className="font-body text-[9px] uppercase tracking-wider">Delivery Ready</div>
+                  </div>
+                </motion.div>
+              </div>
+            </motion.div>
+
+            <motion.div
+              initial={{ opacity: 0, x: 40 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.7, delay: 0.15 }}
+              className="lg:col-span-5 order-1 lg:order-2"
+            >
+              <p className="font-body text-xs uppercase tracking-[0.2em] text-primary/80 mb-4 font-700">
+                Q-Commerce · Blinkit · Zepto · BigBasket
+              </p>
+              <h3 className="font-heading text-3xl md:text-4xl font-600 text-off-white leading-tight mb-6">
+                Quick-commerce growth, <span className="text-primary">delivered in minutes</span>
+              </h3>
+              <p className="font-body text-base text-off-white/60 leading-relaxed mb-8 max-w-md">
+                End-to-end Q-Commerce enablement across Blinkit, Zepto, BigBasket and more —
+                from store onboarding and catalog sync to visibility ads that boost sales fast.
+              </p>
+
+              <ul className="space-y-3">
+                {[
+                  "Store Onboarding & Setup",
+                  "Product & Inventory Sync",
+                  "Faster Delivery Integration",
+                  "Boost Sales in Minutes",
+                ].map((t) => (
+                  <li key={t} className="flex items-start gap-3 text-sm text-off-white/80">
+                    <CheckCircle2 className="w-4 h-4 text-primary mt-0.5 shrink-0" />
+                    <span>{t}</span>
+                  </li>
+                ))}
+              </ul>
+            </motion.div>
+          </div>
         </div>
+
 
         {/* Bottom stats strip */}
         <motion.div
