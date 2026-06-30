@@ -1,4 +1,5 @@
 import { motion } from "framer-motion";
+import { ShoppingBag, Zap, type LucideIcon } from "lucide-react";
 import webDesignIcon from "@/assets/service-web-design.png";
 import seoIcon from "@/assets/service-seo.png";
 import googleAdsIcon from "@/assets/service-google-ads.png";
@@ -11,6 +12,15 @@ import bgSocialAds from "@/assets/bg-social-ads.jpg";
 import bgGoogleAds from "@/assets/bg-google-ads.jpg";
 import bgSeo from "@/assets/bg-seo.jpg";
 import bgContentCreation from "@/assets/bg-content-creation.jpg";
+
+type Service = {
+  title: string;
+  description: string;
+  image?: string;
+  icon?: LucideIcon;
+  bg: string;
+  badge?: string;
+};
 
 const services = [
   {
