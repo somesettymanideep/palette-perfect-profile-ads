@@ -1,4 +1,5 @@
 import { motion } from "framer-motion";
+import { ShoppingBag, Zap, type LucideIcon } from "lucide-react";
 import webDesignIcon from "@/assets/service-web-design.png";
 import seoIcon from "@/assets/service-seo.png";
 import googleAdsIcon from "@/assets/service-google-ads.png";
@@ -12,7 +13,16 @@ import bgGoogleAds from "@/assets/bg-google-ads.jpg";
 import bgSeo from "@/assets/bg-seo.jpg";
 import bgContentCreation from "@/assets/bg-content-creation.jpg";
 
-const services = [
+type Service = {
+  title: string;
+  description: string;
+  image?: string;
+  icon?: LucideIcon;
+  bg: string;
+  badge?: string;
+};
+
+const services: Service[] = [
   {
     title: "Web Designing & Developing",
     description: "Creative designing, high quality building, mobile-friendly, SEO-friendly with supportive maintenance.",
@@ -52,14 +62,16 @@ const services = [
   {
     title: "E-Commerce",
     description: "End-to-end store builds on Shopify, WooCommerce & custom stacks. Catalog, checkout, payments and conversion-led product pages.",
-    image: webDesignIcon,
+    icon: ShoppingBag,
     bg: bgWebDesign,
+    badge: "New",
   },
   {
     title: "Q-Commerce",
     description: "Quick-commerce growth on Blinkit, Zepto, Instamart & Swiggy. Listings, visibility ads, and rapid-delivery SKU strategy.",
-    image: googleAdsIcon,
+    icon: Zap,
     bg: bgGoogleAds,
+    badge: "New",
   },
 ];
 
@@ -123,15 +135,29 @@ const ServicesSection = () => {
 
               <div className="relative z-10">
                 <div className="w-20 h-20 rounded-lg flex items-center justify-center mb-6 transition-all duration-500">
-                  <img
-                    src={service.image}
-                    alt={service.title}
-                    className="w-14 h-14 object-contain transition-transform duration-500 group-hover:scale-110"
-                  />
+                  {service.icon ? (
+                    <div className="w-14 h-14 rounded-lg bg-primary/10 group-hover:bg-primary-foreground/15 flex items-center justify-center transition-all duration-500 group-hover:scale-110">
+                      <service.icon
+                        className="w-7 h-7 text-primary group-hover:text-primary-foreground transition-colors duration-500"
+                        strokeWidth={1.75}
+                      />
+                    </div>
+                  ) : (
+                    <img
+                      src={service.image}
+                      alt={service.title}
+                      className="w-14 h-14 object-contain transition-transform duration-500 group-hover:scale-110"
+                    />
+                  )}
                 </div>
                 <span className="absolute top-6 right-6 font-body text-xs text-muted-foreground/40 group-hover:text-primary-foreground/60 font-500 transition-colors duration-500">
                   {String(i + 1).padStart(2, "0")}
                 </span>
+                {service.badge && (
+                  <span className="absolute top-6 left-6 inline-flex items-center rounded-full border border-primary/40 bg-primary/10 px-2.5 py-0.5 font-body text-[10px] uppercase tracking-wider text-primary group-hover:bg-primary-foreground/15 group-hover:border-primary-foreground/40 group-hover:text-primary-foreground transition-colors duration-500">
+                    {service.badge}
+                  </span>
+                )}
                 <h3 className="font-heading text-xl font-600 text-foreground group-hover:text-primary-foreground mb-3 transition-colors duration-500">
                   {service.title}
                 </h3>
