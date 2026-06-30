@@ -13,6 +13,11 @@ import {
   Play,
   ShoppingBag,
   CheckCircle2,
+  Bike,
+  Package,
+  MapPin,
+  Smartphone,
+  Zap,
 } from "lucide-react";
 import rasrinShoppingAds from "@/assets/rasrin-shopping-ads.png";
 import qcommerceRasrinAsset from "@/assets/qcommerce-rasrin.png.asset.json";
@@ -542,74 +547,152 @@ const GoogleAdsPortfolioSection = () => {
           </div>
 
           {/* ============ ROW 4: Q-COMMERCE ============ */}
-          <div className="grid lg:grid-cols-12 gap-12 lg:gap-16 items-center">
-            <motion.div
-              initial={{ opacity: 0, x: -40 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.7 }}
-              className="lg:col-span-7 relative order-2 lg:order-1"
-            >
-              <div className="absolute -inset-12 bg-primary/15 blur-3xl rounded-full pointer-events-none" />
-              <div className="relative mx-auto" style={{ maxWidth: "560px" }}>
-                <div className="relative bg-[#0f0f0f] rounded-2xl shadow-2xl overflow-hidden border border-off-white/10 p-4 md:p-6">
-                  <img
-                    src={qcommerceRasrin}
-                    alt="Q-Commerce solutions for Blinkit, Zepto and BigBasket"
-                    className="w-full h-auto block rounded-lg"
-                    loading="lazy"
-                  />
-                </div>
-                <motion.div
-                  initial={{ opacity: 0, scale: 0.6, rotate: 8 }}
-                  whileInView={{ opacity: 1, scale: 1, rotate: 6 }}
-                  viewport={{ once: true }}
-                  transition={{ duration: 0.6, delay: 0.6, type: "spring" }}
-                  className="absolute -top-5 -right-3 md:-right-6 bg-primary text-charcoal rounded-2xl px-4 py-3 shadow-2xl flex items-center gap-2"
-                >
-                  <ShoppingBag className="w-5 h-5" />
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.7 }}
+            className="relative overflow-hidden rounded-3xl border border-off-white/10 bg-gradient-to-br from-[#1a1106] via-[#150d05] to-[#0e0904] p-8 md:p-12 lg:p-14"
+          >
+            {/* soft glow */}
+            <div className="absolute -top-24 -right-24 w-[28rem] h-[28rem] bg-primary/20 blur-3xl rounded-full pointer-events-none" />
+            <div className="absolute -bottom-24 -left-24 w-[24rem] h-[24rem] bg-primary/10 blur-3xl rounded-full pointer-events-none" />
+
+            <div className="relative grid lg:grid-cols-12 gap-10 lg:gap-8 items-center">
+              {/* LEFT: copy + bullets */}
+              <div className="lg:col-span-6">
+                <div className="flex items-start gap-4 mb-6">
+                  <div className="shrink-0 w-14 h-14 rounded-full bg-primary text-charcoal flex items-center justify-center font-heading font-700 text-xl shadow-lg shadow-primary/30">
+                    04
+                  </div>
                   <div>
-                    <div className="font-heading text-lg font-700 leading-none">10-min</div>
-                    <div className="font-body text-[9px] uppercase tracking-wider">Delivery Ready</div>
+                    <p className="font-body text-xs uppercase tracking-[0.2em] text-primary/80 font-700 mb-2">
+                      Quick Commerce
+                    </p>
+                    <h3 className="font-heading text-3xl md:text-4xl lg:text-5xl font-700 text-off-white leading-[1.05]">
+                      Q-COMMERCE
+                      <br />
+                      <span className="text-off-white">SOLUTIONS</span>
+                    </h3>
+                  </div>
+                </div>
+
+                <p className="font-heading text-xl md:text-2xl text-primary font-600 mb-8 leading-snug">
+                  Blinkit, Zepto, <br className="hidden sm:block" />BigBasket &amp; More
+                </p>
+
+                <ul className="space-y-4">
+                  {[
+                    "Store Onboarding & Setup",
+                    "Product & Inventory Sync",
+                    "Faster Delivery Integration",
+                    "Boost Sales in Minutes",
+                  ].map((t) => (
+                    <li key={t} className="flex items-center gap-3 text-base md:text-lg text-off-white/85 font-body">
+                      <span className="inline-flex items-center justify-center w-6 h-6 rounded-full bg-primary/15 border border-primary/40 shrink-0">
+                        <CheckCircle2 className="w-3.5 h-3.5 text-primary" />
+                      </span>
+                      <span>{t}</span>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+
+              {/* CENTER: illustration built from tokens (phone + scooter delivery) */}
+              <div className="lg:col-span-4 relative flex justify-center items-center min-h-[280px]">
+                {/* concentric glow rings */}
+                <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
+                  <div className="w-56 h-56 md:w-72 md:h-72 rounded-full border border-primary/20" />
+                </div>
+                <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
+                  <div className="w-40 h-40 md:w-52 md:h-52 rounded-full bg-primary/10 blur-2xl" />
+                </div>
+
+                {/* Phone mockup */}
+                <motion.div
+                  initial={{ y: 10, opacity: 0 }}
+                  whileInView={{ y: 0, opacity: 1 }}
+                  viewport={{ once: true }}
+                  transition={{ duration: 0.6, delay: 0.2 }}
+                  className="relative z-10 w-36 md:w-44 aspect-[9/19] rounded-[2rem] bg-charcoal border-[6px] border-off-white/90 shadow-2xl flex flex-col overflow-hidden"
+                >
+                  <div className="h-5 bg-charcoal flex items-center justify-center">
+                    <div className="w-12 h-1.5 bg-off-white/20 rounded-full" />
+                  </div>
+                  <div className="flex-1 bg-gradient-to-b from-[#1a1a1a] to-[#0a0a0a] p-3 flex flex-col gap-2">
+                    <div className="flex items-center gap-2">
+                      <MapPin className="w-3 h-3 text-primary" />
+                      <div className="h-1.5 flex-1 bg-off-white/15 rounded-full" />
+                    </div>
+                    <div className="h-2 w-3/4 bg-off-white/10 rounded" />
+                    <div className="relative flex-1 rounded-lg bg-gradient-to-br from-primary/30 to-primary/5 mt-1 overflow-hidden">
+                      {/* squiggly route */}
+                      <svg viewBox="0 0 100 100" className="absolute inset-0 w-full h-full" preserveAspectRatio="none">
+                        <path d="M10,80 Q30,60 40,70 T70,40 T90,20" stroke="hsl(var(--primary))" strokeWidth="2" strokeDasharray="3 3" fill="none" />
+                      </svg>
+                      <MapPin className="absolute top-2 right-2 w-4 h-4 text-primary fill-primary" />
+                    </div>
+                    <div className="h-6 rounded-md bg-primary flex items-center justify-center">
+                      <span className="font-body text-[8px] font-700 text-charcoal uppercase tracking-wider">Order Now</span>
+                    </div>
                   </div>
                 </motion.div>
+
+                {/* Delivery rider badge */}
+                <motion.div
+                  initial={{ x: 20, opacity: 0 }}
+                  whileInView={{ x: 0, opacity: 1 }}
+                  viewport={{ once: true }}
+                  transition={{ duration: 0.6, delay: 0.4 }}
+                  className="absolute z-20 right-2 md:right-0 bottom-6 bg-primary text-charcoal rounded-2xl px-3 py-2.5 shadow-2xl flex items-center gap-2"
+                >
+                  <Bike className="w-5 h-5" />
+                  <div>
+                    <div className="font-heading text-sm font-700 leading-none">10-min</div>
+                    <div className="font-body text-[8px] uppercase tracking-wider">Delivery</div>
+                  </div>
+                </motion.div>
+
+                {/* Package badge */}
+                <motion.div
+                  initial={{ x: -20, opacity: 0 }}
+                  whileInView={{ x: 0, opacity: 1 }}
+                  viewport={{ once: true }}
+                  transition={{ duration: 0.6, delay: 0.5 }}
+                  className="absolute z-20 left-2 md:left-0 top-6 bg-off-white text-charcoal rounded-xl px-3 py-2 shadow-xl flex items-center gap-2"
+                >
+                  <Package className="w-4 h-4 text-primary" />
+                  <div className="font-heading text-xs font-700 leading-none">SKU Ready</div>
+                </motion.div>
               </div>
-            </motion.div>
 
-            <motion.div
-              initial={{ opacity: 0, x: 40 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.7, delay: 0.15 }}
-              className="lg:col-span-5 order-1 lg:order-2"
-            >
-              <p className="font-body text-xs uppercase tracking-[0.2em] text-primary/80 mb-4 font-700">
-                Q-Commerce · Blinkit · Zepto · BigBasket
-              </p>
-              <h3 className="font-heading text-3xl md:text-4xl font-600 text-off-white leading-tight mb-6">
-                Quick-commerce growth, <span className="text-primary">delivered in minutes</span>
-              </h3>
-              <p className="font-body text-base text-off-white/60 leading-relaxed mb-8 max-w-md">
-                End-to-end Q-Commerce enablement across Blinkit, Zepto, BigBasket and more —
-                from store onboarding and catalog sync to visibility ads that boost sales fast.
-              </p>
-
-              <ul className="space-y-3">
+              {/* RIGHT: brand chips */}
+              <div className="lg:col-span-2 flex lg:flex-col gap-3 flex-wrap justify-center lg:justify-end">
                 {[
-                  "Store Onboarding & Setup",
-                  "Product & Inventory Sync",
-                  "Faster Delivery Integration",
-                  "Boost Sales in Minutes",
-                ].map((t) => (
-                  <li key={t} className="flex items-start gap-3 text-sm text-off-white/80">
-                    <CheckCircle2 className="w-4 h-4 text-primary mt-0.5 shrink-0" />
-                    <span>{t}</span>
-                  </li>
+                  { name: "blinkit", color: "#F8CB46", text: "#1B1B1B" },
+                  { name: "zepto", color: "#7B5CFA", text: "#FFFFFF" },
+                  { name: "bigbasket", color: "#84B72E", text: "#FFFFFF" },
+                ].map((b, i) => (
+                  <motion.div
+                    key={b.name}
+                    initial={{ opacity: 0, x: 20 }}
+                    whileInView={{ opacity: 1, x: 0 }}
+                    viewport={{ once: true }}
+                    transition={{ duration: 0.5, delay: 0.3 + i * 0.1 }}
+                    className="rounded-xl px-5 py-3 shadow-lg font-heading text-base md:text-lg font-700 lowercase tracking-tight min-w-[120px] text-center"
+                    style={{ background: b.color, color: b.text }}
+                  >
+                    {b.name}
+                  </motion.div>
                 ))}
-              </ul>
-            </motion.div>
-          </div>
+                <p className="font-body text-xs text-off-white/50 lg:text-right text-center w-full lg:mt-1">
+                  &amp; more
+                </p>
+              </div>
+            </div>
+          </motion.div>
         </div>
+
 
 
 
