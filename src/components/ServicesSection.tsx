@@ -12,6 +12,9 @@ import bgSocialAds from "@/assets/bg-social-ads.jpg";
 import bgGoogleAds from "@/assets/bg-google-ads.jpg";
 import bgSeo from "@/assets/bg-seo.jpg";
 import bgContentCreation from "@/assets/bg-content-creation.jpg";
+import bgQCommerceAsset from "@/assets/bg-q-commerce.webp.asset.json";
+
+const bgQCommerce = bgQCommerceAsset.url;
 
 type Service = {
   title: string;
