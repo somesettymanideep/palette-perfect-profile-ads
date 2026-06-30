@@ -1,7 +1,7 @@
 import { motion } from "framer-motion";
 import portfolioBlossoms from "@/assets/portfolio-blossoms.jpg";
 import portfolioPrimeSolutions from "@/assets/portfolio-prime-solutions.png.asset.json";
-import portfolioGym from "@/assets/portfolio-nutriomfit-new.jpg";
+import portfolioDurgaHardware from "@/assets/portfolio-durga-hardware.png.asset.json";
 import portfolioInteriorsNew from "@/assets/portfolio-interiors-new.png";
 import portfolioJVEngineers from "@/assets/portfolio-jvengineers.png";
 import portfolioPixelStories from "@/assets/portfolio-pixel-stories.jpg";
@@ -23,11 +23,11 @@ const clients = [
     result: "Delivered a premium corporate website showcasing complete supply and service solutions under one roof.",
   },
   {
-    name: "NutriomFit",
-    industry: "Holistic Wellness",
-    image: portfolioGym,
+    name: "Durga Hardware and Plywood",
+    industry: "Hardware & Plywood",
+    image: portfolioDurgaHardware.url,
     services: ["Web Design", "Social Media Advertising", "SEO"],
-    result: "Boosted online consultations by 180% with a wellness-focused digital strategy.",
+    result: "Launched a premium showroom website showcasing plywood, laminates, veneers, and hardware accessories.",
   },
   {
     name: "NestSync Interiors",
