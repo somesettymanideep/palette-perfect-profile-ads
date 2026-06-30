@@ -103,20 +103,20 @@ const PortfolioSection = () => {
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
           >
-            <span aria-hidden className="h-px w-10 bg-primary-foreground/70" />
-            <p className="font-body text-xs md:text-sm uppercase tracking-[0.25em] text-primary-foreground font-600">
+            <span aria-hidden className="h-px w-10 bg-white/90" />
+            <p className="font-body text-xs md:text-sm uppercase tracking-[0.25em] text-white font-600">
               Our Portfolio
             </p>
           </motion.div>
           <motion.h2
-            className="font-heading text-4xl md:text-6xl font-600 text-primary-foreground leading-tight"
+            className="font-heading text-4xl md:text-6xl font-600 text-white leading-tight"
             initial={{ opacity: 0, y: 40 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.8, ease: [0.22, 1, 0.36, 1] }}
           >
             Web Designs That{" "}
-            <span className="text-charcoal">Deliver</span>
+            <span className="text-[#1a1a1a]">Deliver</span>
           </motion.h2>
         </div>
 
@@ -155,20 +155,20 @@ const PortfolioSection = () => {
                     viewport={{ once: true, amount: 0.3 }}
                     transition={{ duration: 0.7, delay: 0.4 }}
                   >
-                    <span className="inline-flex items-center font-body text-[11px] md:text-xs font-700 uppercase tracking-[0.2em] text-primary bg-off-white px-4 py-1.5 rounded-full shadow-sm mb-4">
+                    <span className="inline-flex items-center font-body text-[11px] md:text-xs font-700 uppercase tracking-[0.2em] text-[#1a1a1a] bg-white px-4 py-1.5 rounded-full shadow-sm mb-4">
                       {client.industry}
                     </span>
-                    <h3 className="font-heading text-3xl md:text-4xl font-600 text-primary-foreground mb-3 leading-tight">
+                    <h3 className="font-heading text-3xl md:text-4xl font-600 text-white mb-3 leading-tight">
                       {client.name}
                     </h3>
-                    <p className="font-body text-sm md:text-base font-400 text-primary-foreground leading-relaxed mb-6">
+                    <p className="font-body text-sm md:text-base font-400 text-white/95 leading-relaxed mb-6">
                       {client.result}
                     </p>
                     <div className="flex flex-wrap gap-2">
                       {client.services.map((service) => (
                         <span
                           key={service}
-                          className="font-body text-[11px] font-600 uppercase tracking-wider text-primary-foreground border border-primary-foreground/50 px-3 py-1 rounded-full"
+                          className="font-body text-[11px] font-600 uppercase tracking-wider text-white border border-white/70 px-3 py-1 rounded-full"
                         >
                           {service}
                         </span>
@@ -183,7 +183,7 @@ const PortfolioSection = () => {
 
         {/* Bottom highlights */}
         <motion.div
-          className="mt-24 pt-16 border-t border-primary-foreground/20"
+          className="mt-24 pt-16 border-t border-white/30"
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
@@ -205,8 +205,8 @@ const PortfolioSection = () => {
                 viewport={{ once: true }}
                 transition={{ duration: 0.5, delay: i * 0.1 }}
               >
-                <span className="w-2.5 h-2.5 rounded-full bg-charcoal shrink-0" />
-                <span className="font-body text-sm font-500 uppercase tracking-wider text-primary-foreground">
+                <span className="w-2.5 h-2.5 rounded-full bg-[#1a1a1a] shrink-0" />
+                <span className="font-body text-sm font-500 uppercase tracking-wider text-white">
                   {item}
                 </span>
               </motion.div>
