@@ -551,12 +551,12 @@ const GoogleAdsPortfolioSection = () => {
               className="lg:col-span-7 relative order-2 lg:order-1"
             >
               <div className="absolute -inset-12 bg-primary/15 blur-3xl rounded-full pointer-events-none" />
-              <div className="relative mx-auto" style={{ maxWidth: "640px" }}>
-                <div className="relative bg-white rounded-2xl shadow-2xl overflow-hidden border border-off-white/10">
+              <div className="relative mx-auto" style={{ maxWidth: "560px" }}>
+                <div className="relative bg-[#0f0f0f] rounded-2xl shadow-2xl overflow-hidden border border-off-white/10 p-4 md:p-6">
                   <img
                     src={qcommerceRasrin}
                     alt="Q-Commerce solutions for Blinkit, Zepto and BigBasket"
-                    className="w-full h-auto block"
+                    className="w-full h-auto block rounded-lg"
                     loading="lazy"
                   />
                 </div>
