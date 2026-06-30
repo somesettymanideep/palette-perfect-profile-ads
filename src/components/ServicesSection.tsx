@@ -63,8 +63,8 @@ const services: Service[] = [
     bg: bgContentCreation,
   },
   {
-    title: "E-Commerce",
-    description: "End-to-end store builds on Shopify, WooCommerce & custom stacks. Catalog, checkout, payments and conversion-led product pages.",
+    title: "E-Commerce Listing",
+    description: "High-converting product listings across Amazon, Flipkart, Myntra & D2C stores. SEO-rich titles, A+ content, images and catalog optimization.",
     icon: ShoppingBag,
     bg: bgWebDesign,
     badge: "New",
