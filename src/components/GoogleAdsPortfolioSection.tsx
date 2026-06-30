@@ -585,4 +585,296 @@ const GoogleAdsPortfolioSection = () => {
   );
 };
 
+/* ============================================================
+   Q-COMMERCE animated scene
+   6-second looping animations — pure framer-motion, no video
+============================================================ */
+const platforms = [
+  { name: "blinkit", tagline: "India's Last Minute App", filled: true },
+  { name: "zepto", tagline: "10 Minute Grocery Delivery", filled: false },
+  { name: "instamart", tagline: "Groceries in Minutes", filled: true },
+  { name: "swiggy", tagline: "Food you ♥ on time.", filled: false },
+];
+
+const services = [
+  { icon: ShoppingCart, title: "LISTINGS", desc: "Optimize product listings for higher discoverability" },
+  { icon: Eye, title: "VISIBILITY ADS", desc: "Boost product visibility with smart ad campaigns" },
+  { icon: Target, title: "RAPID-DELIVERY SKU STRATEGY", desc: "Focus on high-demand SKUs for fast delivery & repeat orders" },
+  { icon: BarChart3, title: "GROWTH", desc: "Data-driven strategies for scalable & sustainable growth" },
+];
+
+const bestSellers = [
+  { name: "Milk", price: "₹56", emoji: "🥛" },
+  { name: "Banana", price: "₹28", emoji: "🍌" },
+  { name: "Eggs (6)", price: "₹42", emoji: "🥚" },
+  { name: "Maggi", price: "₹14", emoji: "🍜" },
+];
+
+const categories = ["🍎", "🥛", "🍪", "🥤", "🧴", "🧺"];
+
+const QCommerceScene = () => {
+  return (
+    <div className="relative bg-gradient-to-b from-[#fff7f1] to-[#ffe8d8] rounded-3xl p-6 md:p-12 overflow-hidden border border-primary/20 shadow-2xl">
+      {/* soft city silhouette */}
+      <div className="absolute inset-x-0 bottom-0 h-40 bg-gradient-to-t from-primary/10 to-transparent pointer-events-none" />
+      <div className="absolute top-10 left-1/2 -translate-x-1/2 w-72 h-72 bg-primary/15 rounded-full blur-3xl pointer-events-none" />
+
+      {/* Floating 3D-style title */}
+      <motion.div
+        initial={{ opacity: 0, y: -30, scale: 0.9 }}
+        whileInView={{ opacity: 1, y: 0, scale: 1 }}
+        viewport={{ once: true }}
+        transition={{ duration: 0.8, type: "spring", bounce: 0.4 }}
+        className="relative text-center mb-8"
+      >
+        <h3
+          className="font-heading font-700 tracking-tight inline-block leading-none"
+          style={{
+            fontSize: "clamp(2.5rem, 7vw, 5.5rem)",
+            color: "#F36E2B",
+            textShadow:
+              "0 1px 0 #fff, 0 2px 0 #fff, 0 4px 0 #d85812, 0 6px 0 #b54810, 0 14px 30px rgba(243,110,43,0.45)",
+            WebkitTextStroke: "1px #fff",
+          }}
+        >
+          Q-COMMERCE
+        </h3>
+      </motion.div>
+
+      <div className="grid lg:grid-cols-12 gap-6 lg:gap-8 items-center relative z-10">
+        {/* ===== LEFT — platform cards ===== */}
+        <div className="lg:col-span-3 space-y-3 order-2 lg:order-1">
+          {platforms.map((p, i) => (
+            <motion.div
+              key={p.name}
+              initial={{ opacity: 0, x: -40 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.5, delay: 0.2 + i * 0.12, ease: [0.22, 1, 0.36, 1] }}
+              whileHover={{ x: 6, scale: 1.03 }}
+              className={`rounded-2xl px-4 py-3 shadow-lg border ${
+                p.filled
+                  ? "bg-primary text-white border-primary"
+                  : "bg-white text-charcoal border-black/5"
+              }`}
+            >
+              <div className="font-heading text-lg font-700 lowercase leading-none">
+                {p.name}
+              </div>
+              <div className={`text-[10px] mt-1 font-500 ${p.filled ? "text-white/85" : "text-charcoal/60"}`}>
+                {p.tagline}
+              </div>
+            </motion.div>
+          ))}
+        </div>
+
+        {/* ===== CENTER — phone mockup + scooter ===== */}
+        <div className="lg:col-span-6 order-1 lg:order-2 relative flex justify-center">
+          {/* location pin floating */}
+          <motion.div
+            initial={{ opacity: 0, y: -20 }}
+            animate={{ y: [-4, 4, -4] }}
+            transition={{ duration: 3, repeat: Infinity, ease: "easeInOut" }}
+            className="absolute top-2 left-4 md:left-12"
+          >
+            <div className="bg-primary text-white p-2 rounded-full shadow-xl">
+              <MapPin className="w-5 h-5" fill="white" />
+            </div>
+          </motion.div>
+
+          {/* Phone */}
+          <motion.div
+            initial={{ opacity: 0, y: 60, rotate: -3 }}
+            whileInView={{ opacity: 1, y: 0, rotate: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.9, type: "spring", bounce: 0.35 }}
+            className="relative w-[260px] md:w-[300px] aspect-[9/19] bg-[#1a1a1a] rounded-[2.5rem] p-2 shadow-[0_30px_60px_-15px_rgba(243,110,43,0.5)] z-10"
+          >
+            {/* notch */}
+            <div className="absolute top-2 left-1/2 -translate-x-1/2 w-20 h-4 bg-black rounded-b-xl z-20" />
+
+            <div className="relative w-full h-full bg-white rounded-[2.1rem] overflow-hidden flex flex-col">
+              {/* status row */}
+              <div className="flex items-center justify-between px-4 pt-5 pb-2">
+                <div>
+                  <div className="text-[8px] text-charcoal/50 leading-none">Delivering to</div>
+                  <div className="text-[11px] font-700 text-charcoal flex items-center gap-1">
+                    Home <span className="text-[8px]">▾</span>
+                  </div>
+                </div>
+                <div className="flex items-center gap-2">
+                  <Bell className="w-3.5 h-3.5 text-charcoal/70" />
+                  <div className="relative">
+                    <ShoppingCart className="w-3.5 h-3.5 text-charcoal/70" />
+                    <span className="absolute -top-1 -right-1 bg-primary text-white text-[7px] rounded-full w-3 h-3 flex items-center justify-center font-700">
+                      2
+                    </span>
+                  </div>
+                </div>
+              </div>
+
+              {/* search */}
+              <div className="mx-3 mb-2 bg-charcoal/5 rounded-lg flex items-center gap-2 px-2 py-1.5">
+                <Search className="w-3 h-3 text-charcoal/50" />
+                <span className="text-[9px] text-charcoal/50">Search for 'milk'</span>
+              </div>
+
+              {/* Hero banner — animated scooter */}
+              <div className="mx-3 rounded-xl bg-gradient-to-r from-primary to-[#ff8a4c] p-3 relative overflow-hidden h-20">
+                <div className="text-white font-heading font-700 text-[11px] leading-tight max-w-[55%]">
+                  DELIVERING IN
+                  <br />
+                  10-20 MINUTES
+                </div>
+                <motion.div
+                  animate={{ x: [-30, 80, -30] }}
+                  transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
+                  className="absolute right-1 bottom-1 text-2xl"
+                  aria-hidden
+                >
+                  🛵
+                </motion.div>
+                <motion.div
+                  animate={{ opacity: [0.2, 0.7, 0.2] }}
+                  transition={{ duration: 1.2, repeat: Infinity }}
+                  className="absolute right-12 bottom-3 text-yellow-200 text-xs"
+                >
+                  ⚡
+                </motion.div>
+              </div>
+
+              {/* category row */}
+              <div className="px-3 mt-3 grid grid-cols-6 gap-1">
+                {categories.map((c, i) => (
+                  <motion.div
+                    key={i}
+                    initial={{ opacity: 0, y: 10 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true }}
+                    transition={{ duration: 0.4, delay: 0.6 + i * 0.06 }}
+                    className="aspect-square bg-charcoal/5 rounded-lg flex items-center justify-center text-base"
+                  >
+                    {c}
+                  </motion.div>
+                ))}
+              </div>
+
+              {/* best sellers */}
+              <div className="px-3 mt-3">
+                <div className="text-[9px] font-700 text-charcoal mb-1">Best Sellers</div>
+                <div className="grid grid-cols-4 gap-1.5">
+                  {bestSellers.map((b, i) => (
+                    <motion.div
+                      key={b.name}
+                      initial={{ opacity: 0, scale: 0.6 }}
+                      whileInView={{ opacity: 1, scale: 1 }}
+                      viewport={{ once: true }}
+                      transition={{ duration: 0.4, delay: 1 + i * 0.1, type: "spring" }}
+                      className="bg-charcoal/5 rounded-lg p-1.5 text-center"
+                    >
+                      <div className="text-lg leading-none">{b.emoji}</div>
+                      <div className="text-[7px] text-charcoal/70 mt-0.5">{b.name}</div>
+                      <div className="text-[8px] font-700 text-charcoal">{b.price}</div>
+                    </motion.div>
+                  ))}
+                </div>
+              </div>
+
+              {/* CTA */}
+              <motion.div
+                animate={{ scale: [1, 1.03, 1] }}
+                transition={{ duration: 2, repeat: Infinity }}
+                className="mx-3 mt-auto mb-4 bg-primary text-white text-[10px] font-700 rounded-full py-2 text-center"
+              >
+                ▸ View All
+              </motion.div>
+            </div>
+          </motion.div>
+
+          {/* Floating delivery boy emoji */}
+          <motion.div
+            initial={{ x: -200, opacity: 0 }}
+            whileInView={{ x: 0, opacity: 1 }}
+            viewport={{ once: true }}
+            transition={{ duration: 1.2, delay: 0.4, type: "spring" }}
+            className="hidden md:block absolute bottom-0 left-2 text-6xl"
+          >
+            <motion.span
+              animate={{ y: [0, -6, 0] }}
+              transition={{ duration: 1.4, repeat: Infinity }}
+              className="inline-block"
+            >
+              🛵
+            </motion.span>
+          </motion.div>
+
+          {/* Floating shopping basket */}
+          <motion.div
+            initial={{ x: 200, opacity: 0 }}
+            whileInView={{ x: 0, opacity: 1 }}
+            viewport={{ once: true }}
+            transition={{ duration: 1.2, delay: 0.6, type: "spring" }}
+            className="hidden md:block absolute bottom-0 right-2 text-6xl"
+          >
+            <motion.span
+              animate={{ rotate: [-3, 3, -3] }}
+              transition={{ duration: 2.5, repeat: Infinity, ease: "easeInOut" }}
+              className="inline-block"
+            >
+              🧺
+            </motion.span>
+          </motion.div>
+        </div>
+
+        {/* ===== RIGHT — service cards ===== */}
+        <div className="lg:col-span-3 space-y-3 order-3">
+          {services.map((s, i) => {
+            const Icon = s.icon;
+            return (
+              <motion.div
+                key={s.title}
+                initial={{ opacity: 0, x: 40 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.5, delay: 0.2 + i * 0.12, ease: [0.22, 1, 0.36, 1] }}
+                whileHover={{ x: -6, scale: 1.03 }}
+                className="bg-white rounded-2xl p-3 shadow-lg border border-black/5 flex items-start gap-3"
+              >
+                <motion.div
+                  animate={{ scale: [1, 1.08, 1] }}
+                  transition={{ duration: 2.4, repeat: Infinity, delay: i * 0.3 }}
+                  className="shrink-0 w-10 h-10 bg-primary rounded-xl flex items-center justify-center shadow-md"
+                >
+                  <Icon className="w-5 h-5 text-white" strokeWidth={2.4} />
+                </motion.div>
+                <div>
+                  <div className="font-heading text-[11px] font-700 text-charcoal uppercase leading-tight">
+                    {s.title}
+                  </div>
+                  <div className="text-[10px] text-charcoal/65 mt-0.5 leading-snug">{s.desc}</div>
+                </div>
+              </motion.div>
+            );
+          })}
+        </div>
+      </div>
+
+      {/* Bottom tagline plate */}
+      <motion.div
+        initial={{ opacity: 0, y: 20 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true }}
+        transition={{ duration: 0.6, delay: 0.8 }}
+        className="relative z-10 mt-8 mx-auto w-fit bg-primary text-white rounded-xl px-6 py-3 shadow-xl flex items-center gap-4 font-heading font-700 tracking-wide"
+      >
+        <span className="flex items-center gap-1.5"><Zap className="w-4 h-4" /> FAST.</span>
+        <span className="opacity-50">·</span>
+        <span>CONVENIENCE.</span>
+        <span className="opacity-50">·</span>
+        <span>GROWTH.</span>
+      </motion.div>
+    </div>
+  );
+};
+
 export default GoogleAdsPortfolioSection;
