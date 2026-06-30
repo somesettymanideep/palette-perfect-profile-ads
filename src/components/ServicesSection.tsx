@@ -22,7 +22,7 @@ type Service = {
   badge?: string;
 };
 
-const services = [
+const services: Service[] = [
   {
     title: "Web Designing & Developing",
     description: "Creative designing, high quality building, mobile-friendly, SEO-friendly with supportive maintenance.",
@@ -62,14 +62,16 @@ const services = [
   {
     title: "E-Commerce",
     description: "End-to-end store builds on Shopify, WooCommerce & custom stacks. Catalog, checkout, payments and conversion-led product pages.",
-    image: webDesignIcon,
+    icon: ShoppingBag,
     bg: bgWebDesign,
+    badge: "New",
   },
   {
     title: "Q-Commerce",
     description: "Quick-commerce growth on Blinkit, Zepto, Instamart & Swiggy. Listings, visibility ads, and rapid-delivery SKU strategy.",
-    image: googleAdsIcon,
+    icon: Zap,
     bg: bgGoogleAds,
+    badge: "New",
   },
 ];
 
