@@ -183,7 +183,7 @@ const PortfolioSection = () => {
 
         {/* Bottom highlights */}
         <motion.div
-          className="mt-24 pt-16 border-t border-primary-foreground/20"
+          className="mt-24 pt-16 border-t border-white/30"
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
@@ -205,8 +205,8 @@ const PortfolioSection = () => {
                 viewport={{ once: true }}
                 transition={{ duration: 0.5, delay: i * 0.1 }}
               >
-                <span className="w-2.5 h-2.5 rounded-full bg-charcoal shrink-0" />
-                <span className="font-body text-sm font-500 uppercase tracking-wider text-primary-foreground">
+                <span className="w-2.5 h-2.5 rounded-full bg-[#1a1a1a] shrink-0" />
+                <span className="font-body text-sm font-500 uppercase tracking-wider text-white">
                   {item}
                 </span>
               </motion.div>
