@@ -49,6 +49,18 @@ const services = [
     image: contentCreationIcon,
     bg: bgContentCreation,
   },
+  {
+    title: "E-Commerce",
+    description: "End-to-end store builds on Shopify, WooCommerce & custom stacks. Catalog, checkout, payments and conversion-led product pages.",
+    image: webDesignIcon,
+    bg: bgWebDesign,
+  },
+  {
+    title: "Q-Commerce",
+    description: "Quick-commerce growth on Blinkit, Zepto, Instamart & Swiggy. Listings, visibility ads, and rapid-delivery SKU strategy.",
+    image: googleAdsIcon,
+    bg: bgGoogleAds,
+  },
 ];
 
 const ServicesSection = () => {
