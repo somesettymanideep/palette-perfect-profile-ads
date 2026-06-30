@@ -13,8 +13,10 @@ import bgGoogleAds from "@/assets/bg-google-ads.jpg";
 import bgSeo from "@/assets/bg-seo.jpg";
 import bgContentCreation from "@/assets/bg-content-creation.jpg";
 import bgQCommerceAsset from "@/assets/bg-q-commerce.webp.asset.json";
+import bgEcommerceListingAsset from "@/assets/bg-ecommerce-listing.png.asset.json";
 
 const bgQCommerce = bgQCommerceAsset.url;
+const bgEcommerceListing = bgEcommerceListingAsset.url;
 
 type Service = {
   title: string;
@@ -68,8 +70,10 @@ const services: Service[] = [
     title: "E-Commerce Listing",
     description: "High-converting product listings across Amazon, Flipkart, Myntra & D2C stores. SEO-rich titles, A+ content, images and catalog optimization.",
     icon: ShoppingBag,
-    bg: bgWebDesign,
+    bg: bgEcommerceListing,
     badge: "New",
+    bgPosition: "center",
+    overlayClass: "bg-primary/55",
   },
   {
     title: "Q-Commerce",
