@@ -155,20 +155,20 @@ const PortfolioSection = () => {
                     viewport={{ once: true, amount: 0.3 }}
                     transition={{ duration: 0.7, delay: 0.4 }}
                   >
-                    <span className="inline-flex items-center font-body text-[11px] md:text-xs font-700 uppercase tracking-[0.2em] text-primary bg-off-white px-4 py-1.5 rounded-full shadow-sm mb-4">
+                    <span className="inline-flex items-center font-body text-[11px] md:text-xs font-700 uppercase tracking-[0.2em] text-[#1a1a1a] bg-white px-4 py-1.5 rounded-full shadow-sm mb-4">
                       {client.industry}
                     </span>
-                    <h3 className="font-heading text-3xl md:text-4xl font-600 text-primary-foreground mb-3 leading-tight">
+                    <h3 className="font-heading text-3xl md:text-4xl font-600 text-white mb-3 leading-tight">
                       {client.name}
                     </h3>
-                    <p className="font-body text-sm md:text-base font-400 text-primary-foreground leading-relaxed mb-6">
+                    <p className="font-body text-sm md:text-base font-400 text-white/95 leading-relaxed mb-6">
                       {client.result}
                     </p>
                     <div className="flex flex-wrap gap-2">
                       {client.services.map((service) => (
                         <span
                           key={service}
-                          className="font-body text-[11px] font-600 uppercase tracking-wider text-primary-foreground border border-primary-foreground/50 px-3 py-1 rounded-full"
+                          className="font-body text-[11px] font-600 uppercase tracking-wider text-white border border-white/70 px-3 py-1 rounded-full"
                         >
                           {service}
                         </span>
