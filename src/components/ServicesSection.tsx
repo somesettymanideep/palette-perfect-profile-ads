@@ -23,6 +23,8 @@ type Service = {
   icon?: LucideIcon;
   bg: string;
   badge?: string;
+  bgPosition?: string;
+  overlayClass?: string;
 };
 
 const services: Service[] = [
