@@ -77,6 +77,8 @@ const services: Service[] = [
     icon: Zap,
     bg: bgQCommerce,
     badge: "New",
+    bgPosition: "center",
+    overlayClass: "bg-primary/55",
   },
 ];
 
